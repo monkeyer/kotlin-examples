@@ -1,0 +1,7 @@
+task taskC << {
+    println 'this is taskC from common-jvm'
+}
+
+task taskD << {
+    println 'this is taskD from common-jvm'
+}

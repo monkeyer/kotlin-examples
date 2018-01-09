@@ -1,0 +1,4 @@
+rootProject.name = 'GradleProjects'
+
+include 'common-js', 'common-jvm'
+

@@ -1,0 +1,12 @@
+task taskA << {
+    println 'this is taskA from common-js'
+}
+
+task taskB << {
+    println 'this is taskB from common-js'
+}
+
+taskA.dependsOn taskB
+
+taskA.dependsOn ':common-jvm:taskC'
+taskB.dependsOn ':common-jvm:taskD'

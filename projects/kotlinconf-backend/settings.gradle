@@ -1,0 +1,9 @@
+rootProject.name = 'kotlinconf-app'
+
+include 'common-jvm'
+
+/*
+if(INCLUDE_ANDROID == "true") {
+    include 'android', 'android:app'
+}
+*/
