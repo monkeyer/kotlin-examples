@@ -1,0 +1,148 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" external-system-id="GRADLE" name="Gradle : io.ktor : ktor-samples-httpbin-0.9.1-SNAPSHOT.war (exploded)">
+    <output-path>$PROJECT_DIR$/ktor-samples/ktor-samples-httpbin/build/libs/exploded/ktor-samples-httpbin-0.9.1-SNAPSHOT.war</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$">
+        <manifest>TWFuaWZlc3QtVmVyc2lvbjogMS4wDQoNCg==</manifest>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/ktor-samples/ktor-samples-httpbin/build/libs/exploded/ktor-samples-httpbin-0.9.1-SNAPSHOT.war/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="ktor-samples-httpbin_main/web/Web Gradle : ktor-samples-httpbin-0.9.1-SNAPSHOT.war" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="ktor-samples-httpbin_main" />
+          <element id="dir-copy" path="$PROJECT_DIR$/ktor-samples/ktor-samples-httpbin/out/production/resources" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="archive" name="io.ktor-ktor-gson-0.9.1-SNAPSHOT.jar">
+            <element id="module-output" name="ktor-gson_main" />
+            <element id="dir-copy" path="$PROJECT_DIR$/ktor-features/ktor-gson/out/production/resources" />
+          </element>
+          <element id="archive" name="io.ktor-ktor-http-0.9.1-SNAPSHOT.jar">
+            <element id="module-output" name="ktor-http_main" />
+            <element id="dir-copy" path="$PROJECT_DIR$/ktor-http/out/production/resources" />
+          </element>
+          <element id="archive" name="io.ktor-ktor-utils-0.9.1-SNAPSHOT.jar">
+            <element id="module-output" name="ktor-utils_main" />
+            <element id="dir-copy" path="$PROJECT_DIR$/ktor-utils/out/production/resources" />
+          </element>
+          <element id="library" level="project" name="Gradle: org.jetbrains.kotlin:kotlin-reflect:1.2.10" />
+          <element id="library" level="project" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.10" />
+          <element id="library" level="project" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.10" />
+          <element id="library" level="project" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:0.21-alpha-2" />
+          <element id="library" level="project" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-io:0.21-alpha-2" />
+          <element id="library" level="project" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:0.21-alpha-2" />
+          <element id="library" level="project" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.2.10" />
+          <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.25" />
+          <element id="library" level="project" name="Gradle: com.typesafe:config:1.3.1" />
+          <element id="library" level="project" name="Gradle: org.jetbrains:annotations:13.0" />
+          <element id="library" level="project" name="Gradle: org.jetbrains.kotlinx:kotlinx-io-jvm:0.0.8" />
+          <element id="library" level="project" name="Gradle: com.google.code.gson:gson:2.8.1" />
+          <element id="archive" name="io.ktor-ktor-server-core-0.9.1-SNAPSHOT.jar">
+            <element id="module-output" name="ktor-server-core_main~1" />
+            <element id="dir-copy" path="$PROJECT_DIR$/ktor-server/ktor-server-core/out/production/resources" />
+          </element>
+          <element id="archive" name="io.ktor-ktor-html-builder-0.9.1-SNAPSHOT.jar">
+            <element id="module-output" name="ktor-html-builder_main" />
+            <element id="dir-copy" path="$PROJECT_DIR$/ktor-features/ktor-html-builder/out/production/resources" />
+          </element>
+          <element id="library" level="project" name="Gradle: org.jetbrains.kotlinx:kotlinx-html-jvm:0.6.7" />
+          <element id="archive" name="io.ktor-ktor-server-test-host-0.9.1-SNAPSHOT.jar">
+            <element id="module-output" name="ktor-server-test-host_main" />
+            <element id="dir-copy" path="$PROJECT_DIR$/ktor-server/ktor-server-test-host/out/production/resources" />
+          </element>
+          <element id="archive" name="io.ktor-ktor-server-jetty-0.9.1-SNAPSHOT.jar">
+            <element id="module-output" name="ktor-server-jetty_main" />
+            <element id="dir-copy" path="$PROJECT_DIR$/ktor-server/ktor-server-jetty/out/production/resources" />
+          </element>
+          <element id="archive" name="io.ktor-ktor-server-servlet-0.9.1-SNAPSHOT.jar">
+            <element id="module-output" name="ktor-server-servlet_main" />
+            <element id="dir-copy" path="$PROJECT_DIR$/ktor-server/ktor-server-servlet/out/production/resources" />
+          </element>
+          <element id="archive" name="io.ktor-ktor-server-host-common-0.9.1-SNAPSHOT.jar">
+            <element id="module-output" name="ktor-server-host-common_main" />
+            <element id="dir-copy" path="$PROJECT_DIR$/ktor-server/ktor-server-host-common/out/production/resources" />
+          </element>
+          <element id="library" level="project" name="Gradle: org.eclipse.jetty:jetty-alpn-server:9.4.6.v20170531" />
+          <element id="library" level="project" name="Gradle: org.eclipse.jetty.http2:http2-server:9.4.6.v20170531" />
+          <element id="library" level="project" name="Gradle: org.eclipse.jetty:jetty-server:9.4.6.v20170531" />
+          <element id="library" level="project" name="Gradle: org.eclipse.jetty:jetty-servlets:9.4.6.v20170531" />
+          <element id="library" level="project" name="Gradle: javax.servlet:javax.servlet-api:3.1.0" />
+          <element id="library" level="project" name="Gradle: org.eclipse.jetty.http2:http2-common:9.4.6.v20170531" />
+          <element id="library" level="project" name="Gradle: org.eclipse.jetty.http2:http2-hpack:9.4.6.v20170531" />
+          <element id="library" level="project" name="Gradle: org.eclipse.jetty:jetty-http:9.4.6.v20170531" />
+          <element id="library" level="project" name="Gradle: org.eclipse.jetty:jetty-io:9.4.6.v20170531" />
+          <element id="library" level="project" name="Gradle: org.eclipse.jetty:jetty-continuation:9.4.6.v20170531" />
+          <element id="library" level="project" name="Gradle: org.eclipse.jetty:jetty-util:9.4.6.v20170531" />
+          <element id="archive" name="io.ktor-ktor-client-apache-0.9.1-SNAPSHOT.jar">
+            <element id="module-output" name="ktor-client-apache_main" />
+            <element id="dir-copy" path="$PROJECT_DIR$/ktor-client/ktor-client-apache/out/production/resources" />
+          </element>
+          <element id="archive" name="io.ktor-ktor-http-cio-0.9.1-SNAPSHOT.jar">
+            <element id="module-output" name="ktor-http-cio_main" />
+            <element id="dir-copy" path="$PROJECT_DIR$/ktor-http-cio/out/production/resources" />
+          </element>
+          <element id="archive" name="io.ktor-ktor-network-0.9.1-SNAPSHOT.jar">
+            <element id="module-output" name="ktor-network_main" />
+            <element id="dir-copy" path="$PROJECT_DIR$/ktor-network/out/production/resources" />
+          </element>
+          <element id="library" level="project" name="Gradle: org.apache.httpcomponents:httpasyncclient:4.1.3" />
+          <element id="library" level="project" name="Gradle: org.apache.httpcomponents:httpcore-nio:4.4.6" />
+          <element id="library" level="project" name="Gradle: org.apache.httpcomponents:httpclient:4.5.3" />
+          <element id="library" level="project" name="Gradle: org.apache.httpcomponents:httpcore:4.4.6" />
+          <element id="library" level="project" name="Gradle: commons-logging:commons-logging:1.2" />
+          <element id="library" level="project" name="Gradle: commons-codec:commons-codec:1.9" />
+          <element id="archive" name="io.ktor-ktor-client-core-0.9.1-SNAPSHOT.jar">
+            <element id="module-output" name="ktor-client-core_main~1" />
+            <element id="dir-copy" path="$PROJECT_DIR$/ktor-client/ktor-client-core/out/production/resources" />
+          </element>
+          <element id="file-copy" path="$PROJECT_DIR$/ktor-server/ktor-server-core/build/libs/ktor-server-core-0.9.1-SNAPSHOT-test.jar" />
+          <element id="library" level="project" name="Gradle: org.jetbrains.kotlin:kotlin-test-junit:1.2.10" />
+          <element id="library" level="project" name="Gradle: org.jetbrains.kotlin:kotlin-test:1.2.10" />
+          <element id="library" level="project" name="Gradle: ch.qos.logback:logback-classic:1.2.1" />
+          <element id="library" level="project" name="Gradle: org.eclipse.jetty.http2:http2-http-client-transport:9.4.6.v20170531" />
+          <element id="library" level="project" name="Gradle: org.eclipse.jetty.http2:http2-client:9.4.6.v20170531" />
+          <element id="library" level="project" name="Gradle: org.eclipse.jetty:jetty-client:9.4.6.v20170531" />
+          <element id="library" level="project" name="Gradle: org.mortbay.jetty.alpn:alpn-boot:8.1.7.v20160121" />
+          <element id="library" level="project" name="Gradle: junit:junit:4.12" />
+          <element id="library" level="project" name="Gradle: ch.qos.logback:logback-core:1.2.1" />
+          <element id="library" level="project" name="Gradle: org.eclipse.jetty:jetty-alpn-client:9.4.6.v20170531" />
+          <element id="library" level="project" name="Gradle: org.hamcrest:hamcrest-core:1.3" />
+          <element id="archive" name="io.ktor-ktor-client-jetty-0.9.1-SNAPSHOT.jar">
+            <element id="module-output" name="ktor-client-jetty_main~1" />
+            <element id="dir-copy" path="$PROJECT_DIR$/ktor-client/ktor-client-jetty/out/production/resources" />
+          </element>
+          <element id="archive" name="io.ktor-ktor-client-tests-0.9.1-SNAPSHOT.jar">
+            <element id="module-output" name="ktor-client-tests_main~1" />
+            <element id="dir-copy" path="$PROJECT_DIR$/ktor-client/ktor-client-tests/out/production/resources" />
+          </element>
+          <element id="archive" name="io.ktor-ktor-server-core_test-0.9.1-SNAPSHOT.jar">
+            <element id="module-output" name="ktor-server-core_test~1" />
+          </element>
+          <element id="library" level="project" name="Gradle: org.slf4j:jul-to-slf4j:1.7.12" />
+          <element id="library" level="project" name="Gradle: io.netty:netty-codec-http2:4.1.12.Final" />
+          <element id="library" level="project" name="Gradle: org.eclipse.jetty.alpn:alpn-api:1.0.0" />
+          <element id="library" level="project" name="Gradle: com.googlecode.json-simple:json-simple:1.1.1" />
+          <element id="library" level="project" name="Gradle: io.netty:netty-codec-http:4.1.12.Final" />
+          <element id="library" level="project" name="Gradle: io.netty:netty-handler:4.1.12.Final" />
+          <element id="library" level="project" name="Gradle: io.netty:netty-codec:4.1.12.Final" />
+          <element id="library" level="project" name="Gradle: io.netty:netty-transport:4.1.12.Final" />
+          <element id="library" level="project" name="Gradle: io.netty:netty-buffer:4.1.12.Final" />
+          <element id="library" level="project" name="Gradle: io.netty:netty-resolver:4.1.12.Final" />
+          <element id="library" level="project" name="Gradle: io.netty:netty-common:4.1.12.Final" />
+          <element id="archive" name="io.ktor-ktor-server-netty-0.9.1-SNAPSHOT.jar">
+            <element id="module-output" name="ktor-server-netty_main~1" />
+            <element id="dir-copy" path="$PROJECT_DIR$/ktor-server/ktor-server-netty/out/production/resources" />
+          </element>
+          <element id="archive" name="io.ktor-ktor-auth-0.9.1-SNAPSHOT.jar">
+            <element id="module-output" name="ktor-features-ktor-auth_main" />
+            <element id="dir-copy" path="$PROJECT_DIR$/ktor-features/ktor-auth/out/production/resources" />
+          </element>
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

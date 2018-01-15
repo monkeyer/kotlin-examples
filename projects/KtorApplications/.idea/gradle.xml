@@ -6,27 +6,51 @@
         <option name="createEmptyContentRootDirectories" value="true" />
         <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="$PROJECT_DIR$/../../../../gradle-4.4.1" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../gradle-4.3" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/ktor-client" />
             <option value="$PROJECT_DIR$/ktor-client/ktor-client-apache" />
+            <option value="$PROJECT_DIR$/ktor-client/ktor-client-cio" />
             <option value="$PROJECT_DIR$/ktor-client/ktor-client-core" />
             <option value="$PROJECT_DIR$/ktor-client/ktor-client-jetty" />
             <option value="$PROJECT_DIR$/ktor-client/ktor-client-tests" />
+            <option value="$PROJECT_DIR$/ktor-features" />
+            <option value="$PROJECT_DIR$/ktor-features/ktor-auth" />
+            <option value="$PROJECT_DIR$/ktor-features/ktor-auth-jwt" />
+            <option value="$PROJECT_DIR$/ktor-features/ktor-auth-ldap" />
+            <option value="$PROJECT_DIR$/ktor-features/ktor-freemarker" />
+            <option value="$PROJECT_DIR$/ktor-features/ktor-gson" />
+            <option value="$PROJECT_DIR$/ktor-features/ktor-html-builder" />
+            <option value="$PROJECT_DIR$/ktor-features/ktor-jackson" />
+            <option value="$PROJECT_DIR$/ktor-features/ktor-locations" />
+            <option value="$PROJECT_DIR$/ktor-features/ktor-metrics" />
+            <option value="$PROJECT_DIR$/ktor-features/ktor-server-sessions" />
+            <option value="$PROJECT_DIR$/ktor-features/ktor-websockets" />
             <option value="$PROJECT_DIR$/ktor-http" />
             <option value="$PROJECT_DIR$/ktor-http-cio" />
             <option value="$PROJECT_DIR$/ktor-network" />
             <option value="$PROJECT_DIR$/ktor-samples" />
+            <option value="$PROJECT_DIR$/ktor-samples/ktor-samples-gson" />
             <option value="$PROJECT_DIR$/ktor-samples/ktor-samples-hello" />
+            <option value="$PROJECT_DIR$/ktor-samples/ktor-samples-html" />
+            <option value="$PROJECT_DIR$/ktor-samples/ktor-samples-httpbin" />
+            <option value="$PROJECT_DIR$/ktor-samples/ktor-samples-kweet" />
+            <option value="$PROJECT_DIR$/ktor-samples/ktor-samples-post" />
+            <option value="$PROJECT_DIR$/ktor-samples/ktor-samples-ssl-http2" />
+            <option value="$PROJECT_DIR$/ktor-samples/ktor-samples-youkube" />
             <option value="$PROJECT_DIR$/ktor-server" />
+            <option value="$PROJECT_DIR$/ktor-server/ktor-server-benchmarks" />
+            <option value="$PROJECT_DIR$/ktor-server/ktor-server-cio" />
             <option value="$PROJECT_DIR$/ktor-server/ktor-server-core" />
             <option value="$PROJECT_DIR$/ktor-server/ktor-server-host-common" />
             <option value="$PROJECT_DIR$/ktor-server/ktor-server-jetty" />
             <option value="$PROJECT_DIR$/ktor-server/ktor-server-netty" />
             <option value="$PROJECT_DIR$/ktor-server/ktor-server-servlet" />
             <option value="$PROJECT_DIR$/ktor-server/ktor-server-test-host" />
+            <option value="$PROJECT_DIR$/ktor-server/ktor-server-tests" />
+            <option value="$PROJECT_DIR$/ktor-server/ktor-server-tomcat" />
             <option value="$PROJECT_DIR$/ktor-utils" />
           </set>
         </option>

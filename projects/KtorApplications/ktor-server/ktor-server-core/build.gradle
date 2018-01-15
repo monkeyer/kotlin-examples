@@ -8,5 +8,5 @@ dependencies {
 }
 
 artifacts {
-    //testOutput jarTest
+    testOutput jarTest
 }

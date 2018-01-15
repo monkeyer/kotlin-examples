@@ -47,3 +47,58 @@ project(':ktor-server:ktor-server-jetty').projectDir = "$rootDir/ktor-server/kto
 include ':ktor-server:ktor-server-servlet'
 project(':ktor-server:ktor-server-servlet').projectDir = "$rootDir/ktor-server/ktor-server-servlet" as File
 
+include ':ktor-features'
+project(':ktor-features').projectDir = "$rootDir/ktor-features" as File
+
+include ':ktor-features:ktor-html-builder'
+project(':ktor-features:ktor-html-builder').projectDir = "$rootDir/ktor-features/ktor-html-builder" as File
+
+include ':ktor-samples:ktor-samples-html'
+project(':ktor-samples:ktor-samples-html').projectDir = "$rootDir/ktor-samples/ktor-samples-html" as File
+
+include ':ktor-features:ktor-gson'
+project(':ktor-features:ktor-gson').projectDir = "$rootDir/ktor-features/ktor-gson" as File
+
+include ':ktor-samples:ktor-samples-gson'
+project(':ktor-samples:ktor-samples-gson').projectDir = "$rootDir/ktor-samples/ktor-samples-gson" as File
+
+include ':ktor-features:ktor-locations'
+project(':ktor-features:ktor-locations').projectDir = "$rootDir/ktor-features/ktor-locations" as File
+include ':ktor-features:ktor-auth'
+project(':ktor-features:ktor-auth').projectDir = "$rootDir/ktor-features/ktor-auth" as File
+include ':ktor-features:ktor-auth-jwt'
+project(':ktor-features:ktor-auth-jwt').projectDir = "$rootDir/ktor-features/ktor-auth-jwt" as File
+include ':ktor-features:ktor-auth-ldap'
+project(':ktor-features:ktor-auth-ldap').projectDir = "$rootDir/ktor-features/ktor-auth-ldap" as File
+include ':ktor-features:ktor-freemarker'
+project(':ktor-features:ktor-freemarker').projectDir = "$rootDir/ktor-features/ktor-freemarker" as File
+include ':ktor-features:ktor-jackson'
+project(':ktor-features:ktor-jackson').projectDir = "$rootDir/ktor-features/ktor-jackson" as File
+include ':ktor-features:ktor-metrics'
+project(':ktor-features:ktor-metrics').projectDir = "$rootDir/ktor-features/ktor-metrics" as File
+include ':ktor-features:ktor-server-sessions'
+project(':ktor-features:ktor-server-sessions').projectDir = "$rootDir/ktor-features/ktor-server-sessions" as File
+
+include ':ktor-features:ktor-websockets'
+project(':ktor-features:ktor-websockets').projectDir = "$rootDir/ktor-features/ktor-websockets" as File
+include ':ktor-server:ktor-server-tomcat'
+project(':ktor-server:ktor-server-tomcat').projectDir = "$rootDir/ktor-server/ktor-server-tomcat" as File
+include ':ktor-server:ktor-server-cio'
+project(':ktor-server:ktor-server-cio').projectDir = "$rootDir/ktor-server/ktor-server-cio" as File
+include ':ktor-server:ktor-server-benchmarks'
+project(':ktor-server:ktor-server-benchmarks').projectDir = "$rootDir/ktor-server/ktor-server-benchmarks" as File
+include ':ktor-server:ktor-server-tests'
+project(':ktor-server:ktor-server-tests').projectDir = "$rootDir/ktor-server/ktor-server-tests" as File
+include ':ktor-client:ktor-client-cio'
+project(':ktor-client:ktor-client-cio').projectDir = "$rootDir/ktor-client/ktor-client-cio" as File
+include ':ktor-samples:ktor-samples-post'
+project(':ktor-samples:ktor-samples-post').projectDir = "$rootDir/ktor-samples/ktor-samples-post" as File
+include ':ktor-samples:ktor-samples-youkube'
+project(':ktor-samples:ktor-samples-youkube').projectDir = "$rootDir/ktor-samples/ktor-samples-youkube" as File
+include ':ktor-samples:ktor-samples-ssl-http2'
+project(':ktor-samples:ktor-samples-ssl-http2').projectDir = "$rootDir/ktor-samples/ktor-samples-ssl-http2" as File
+include ':ktor-samples:ktor-samples-kweet'
+project(':ktor-samples:ktor-samples-kweet').projectDir = "$rootDir/ktor-samples/ktor-samples-kweet" as File
+include ':ktor-samples:ktor-samples-httpbin'
+project(':ktor-samples:ktor-samples-httpbin').projectDir = "$rootDir/ktor-samples/ktor-samples-httpbin" as File
+

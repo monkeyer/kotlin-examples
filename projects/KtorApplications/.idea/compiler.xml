@@ -2,22 +2,54 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="features_main" target="1.8" />
+      <module name="features_test" target="1.8" />
+      <module name="ktor-auth-ldap_main" target="1.8" />
+      <module name="ktor-auth-ldap_test" target="1.8" />
+      <module name="ktor-auth_main" target="1.8" />
+      <module name="ktor-auth_test" target="1.8" />
       <module name="ktor-client-core_main" target="1.8" />
       <module name="ktor-client-core_test" target="1.8" />
       <module name="ktor-client-jetty_main" target="1.8" />
       <module name="ktor-client-jetty_test" target="1.8" />
       <module name="ktor-client-tests_main" target="1.8" />
       <module name="ktor-client-tests_test" target="1.8" />
+      <module name="ktor-feature_main" target="1.8" />
+      <module name="ktor-feature_test" target="1.8" />
+      <module name="ktor-features-ktor-gson_main" target="1.8" />
+      <module name="ktor-features-ktor-gson_test" target="1.8" />
+      <module name="ktor-features-ktor-html-builder_main" target="1.8" />
+      <module name="ktor-features-ktor-html-builder_test" target="1.8" />
+      <module name="ktor-features-ktor-samples-gson_main" target="1.8" />
+      <module name="ktor-features-ktor-samples-gson_test" target="1.8" />
+      <module name="ktor-features-ktor-websockets_main" target="1.8" />
+      <module name="ktor-features-ktor-websockets_test" target="1.8" />
+      <module name="ktor-featuresktor-gson_main" target="1.8" />
+      <module name="ktor-featuresktor-gson_test" target="1.8" />
+      <module name="ktor-freemarker_main" target="1.8" />
+      <module name="ktor-freemarker_test" target="1.8" />
+      <module name="ktor-locations_main" target="1.8" />
+      <module name="ktor-locations_test" target="1.8" />
+      <module name="ktor-samples-gson_main~1" target="1.8" />
+      <module name="ktor-samples-gson_test~1" target="1.8" />
+      <module name="ktor-server-cio_main~1" target="1.8" />
+      <module name="ktor-server-cio_test~1" target="1.8" />
       <module name="ktor-server-core_main" target="1.8" />
       <module name="ktor-server-core_test" target="1.8" />
       <module name="ktor-server-netty_main" target="1.8" />
       <module name="ktor-server-netty_test" target="1.8" />
+      <module name="ktor-server-sessions_main" target="1.8" />
+      <module name="ktor-server-sessions_test" target="1.8" />
       <module name="ktor-server-test-host_main~1" target="1.8" />
       <module name="ktor-server-test-host_test~1" target="1.8" />
       <module name="KtorApplications-ktor-client_main" target="1.8" />
       <module name="KtorApplications-ktor-client_test" target="1.8" />
+      <module name="KtorApplications-ktor-html-builder_main" target="1.8" />
+      <module name="KtorApplications-ktor-html-builder_test" target="1.8" />
       <module name="KtorApplications-ktor-http-cio_main" target="1.8" />
       <module name="KtorApplications-ktor-http-cio_test" target="1.8" />
+      <module name="ktorktor-samples-gson_main" target="1.8" />
+      <module name="ktorktor-samples-gson_test" target="1.8" />
       <module name="ktorktor-server-test-host_main" target="1.8" />
       <module name="ktorktor-server-test-host_test" target="1.8" />
     </bytecodeTargetLevel>
