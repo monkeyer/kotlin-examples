@@ -1,0 +1,270 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>io.ktor.content - ktor-server-core</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">ktor-server-core</a>&nbsp;/&nbsp;<a href=".">io.ktor.content</a><br/>
+<br/>
+<h2>Package io.ktor.content</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-byte-array-content/index.html">ByteArrayContent</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ByteArrayContent</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ByteArrayContent</span></code>
+<p>Implementation of the <a href="#">OutgoingContent.ByteArrayContent</a> for sending array of bytes</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-cache-control/index.html">CacheControl</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">CacheControl</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-entity-tag-version/index.html">EntityTagVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">EntityTagVersion</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-version/index.html"><span class="identifier">Version</span></a></code>
+<p>This version checks <a href="-entity-tag-version/etag.html">etag</a> value and pass it through conditions supplied by the remote client. Depending on conditions it
+produces return value of enum type <a href="-version-check-result/index.html">VersionCheckResult</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-http-status-code-content/index.html">HttpStatusCodeContent</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">HttpStatusCodeContent</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">NoContent</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-jar-file-content/index.html">JarFileContent</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">JarFileContent</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-resource/index.html"><span class="identifier">Resource</span></a><span class="symbol">, </span><span class="identifier">ReadChannelContent</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-last-modified-version/index.html">LastModifiedVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">LastModifiedVersion</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-version/index.html"><span class="identifier">Version</span></a></code>
+<p>This version passes the given <a href="-last-modified-version/last-modified.html">lastModified</a> date through the client provided
+http conditional headers If-Modified-Since and If-Unmodified-Since.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-local-file-content/index.html">LocalFileContent</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">LocalFileContent</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ReadChannelContent</span><span class="symbol">, </span><a href="-resource/index.html"><span class="identifier">Resource</span></a></code>
+<p>OutgoingContent representing a local <a href="-local-file-content/file.html">file</a> with a specified <a href="-local-file-content/content-type.html">contentType</a>, <a href="-local-file-content/expires.html">expires</a> date and <a href="-local-file-content/cache-control.html">cacheControl</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-resource/index.html">Resource</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">Resource</span></code>
+<p>Represents a resource that can be mixed into <a href="#">OutgoingContent</a> to give more information about content.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-u-r-i-file-content/index.html">URIFileContent</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">URIFileContent</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ReadChannelContent</span><span class="symbol">, </span><a href="-resource/index.html"><span class="identifier">Resource</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-version/index.html">Version</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">Version</span></code>
+<p>Represents content version</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-version-check-result/index.html">VersionCheckResult</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">VersionCheckResult</span></code>
+<p>Represent result of the version comparison between content being sent and HTTP request.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-writer-content/index.html">WriterContent</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">WriterContent</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">WriteChannelContent</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extensions for External Classes</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="io.ktor.pipeline.-pipeline-context/index.html">io.ktor.pipeline.PipelineContext</a></p>
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="static-base-package.html">staticBasePackage</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><a href="../io.ktor.routing/-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="identifier">staticBasePackage</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Base package for relative resources calculations for static content</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="static-root-folder.html">staticRootFolder</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><a href="../io.ktor.routing/-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="identifier">staticRootFolder</span><span class="symbol">: </span><span class="identifier">File</span><span class="symbol">?</span></code>
+<p>Base folder for relative files calculations for static content</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-local-file-content.html">LocalFileContent</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">LocalFileContent</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content$LocalFileContent(java.io.File, kotlin.String, io.ktor.http.ContentType, java.time.LocalDateTime, io.ktor.content.CacheControl)/baseDir">baseDir</span><span class="symbol">:</span>&nbsp;<span class="identifier">File</span><span class="symbol">, </span><span class="identifier" id="io.ktor.content$LocalFileContent(java.io.File, kotlin.String, io.ktor.http.ContentType, java.time.LocalDateTime, io.ktor.content.CacheControl)/relativePath">relativePath</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.content$LocalFileContent(java.io.File, kotlin.String, io.ktor.http.ContentType, java.time.LocalDateTime, io.ktor.content.CacheControl)/contentType">contentType</span><span class="symbol">:</span>&nbsp;<span class="identifier">ContentType</span>&nbsp;<span class="symbol">=</span>&nbsp;ContentType.defaultForFilePath(relativePath)<span class="symbol">, </span><span class="identifier" id="io.ktor.content$LocalFileContent(java.io.File, kotlin.String, io.ktor.http.ContentType, java.time.LocalDateTime, io.ktor.content.CacheControl)/expires">expires</span><span class="symbol">:</span>&nbsp;<span class="identifier">LocalDateTime</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="io.ktor.content$LocalFileContent(java.io.File, kotlin.String, io.ktor.http.ContentType, java.time.LocalDateTime, io.ktor.content.CacheControl)/cacheControl">cacheControl</span><span class="symbol">:</span>&nbsp;<a href="-cache-control/index.html"><span class="identifier">CacheControl</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="-local-file-content/index.html"><span class="identifier">LocalFileContent</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">LocalFileContent</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content$LocalFileContent(java.nio.file.Path, java.nio.file.Path, io.ktor.http.ContentType, java.time.LocalDateTime, io.ktor.content.CacheControl)/baseDir">baseDir</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">, </span><span class="identifier" id="io.ktor.content$LocalFileContent(java.nio.file.Path, java.nio.file.Path, io.ktor.http.ContentType, java.time.LocalDateTime, io.ktor.content.CacheControl)/relativePath">relativePath</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><span class="symbol">, </span><span class="identifier" id="io.ktor.content$LocalFileContent(java.nio.file.Path, java.nio.file.Path, io.ktor.http.ContentType, java.time.LocalDateTime, io.ktor.content.CacheControl)/contentType">contentType</span><span class="symbol">:</span>&nbsp;<span class="identifier">ContentType</span>&nbsp;<span class="symbol">=</span>&nbsp;ContentType.defaultForFile(relativePath)<span class="symbol">, </span><span class="identifier" id="io.ktor.content$LocalFileContent(java.nio.file.Path, java.nio.file.Path, io.ktor.http.ContentType, java.time.LocalDateTime, io.ktor.content.CacheControl)/expires">expires</span><span class="symbol">:</span>&nbsp;<span class="identifier">LocalDateTime</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="io.ktor.content$LocalFileContent(java.nio.file.Path, java.nio.file.Path, io.ktor.http.ContentType, java.time.LocalDateTime, io.ktor.content.CacheControl)/cacheControl">cacheControl</span><span class="symbol">:</span>&nbsp;<a href="-cache-control/index.html"><span class="identifier">CacheControl</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="-local-file-content/index.html"><span class="identifier">LocalFileContent</span></a></code>
+<p>Creates an instance of <a href="-local-file-content/index.html">LocalFileContent</a> for a file designated by <a href="-local-file-content.html#io.ktor.content$LocalFileContent(java.io.File, kotlin.String, io.ktor.http.ContentType, java.time.LocalDateTime, io.ktor.content.CacheControl)/relativePath">relativePath</a> in a <a href="-local-file-content.html#io.ktor.content$LocalFileContent(java.io.File, kotlin.String, io.ktor.http.ContentType, java.time.LocalDateTime, io.ktor.content.CacheControl)/baseDir">baseDir</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="content-length.html">contentLength</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">OutgoingContent</span><span class="symbol">.</span><span class="identifier">contentLength</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="content-type.html">contentType</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">OutgoingContent</span><span class="symbol">.</span><span class="identifier">contentType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ContentType</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="default.html">default</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../io.ktor.routing/-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="identifier">default</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content$default(io.ktor.routing.Route, kotlin.String)/localPath">localPath</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">fun </span><a href="../io.ktor.routing/-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="identifier">default</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content$default(io.ktor.routing.Route, java.io.File)/localPath">localPath</span><span class="symbol">:</span>&nbsp;<span class="identifier">File</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Specifies <a href="default.html#io.ktor.content$default(io.ktor.routing.Route, kotlin.String)/localPath">localPath</a> as a default file to serve when folder is requested</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="default-resource.html">defaultResource</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../io.ktor.routing/-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="identifier">defaultResource</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content$defaultResource(io.ktor.routing.Route, kotlin.String, kotlin.String)/resource">resource</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.content$defaultResource(io.ktor.routing.Route, kotlin.String, kotlin.String)/resourcePackage">resourcePackage</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Specifies <a href="default-resource.html#io.ktor.content$defaultResource(io.ktor.routing.Route, kotlin.String, kotlin.String)/resource">resource</a> as a default resources to serve when folder is requested</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="file.html">file</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../io.ktor.routing/-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="identifier">file</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content$file(io.ktor.routing.Route, kotlin.String, kotlin.String)/remotePath">remotePath</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.content$file(io.ktor.routing.Route, kotlin.String, kotlin.String)/localPath">localPath</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;remotePath<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">fun </span><a href="../io.ktor.routing/-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="identifier">file</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content$file(io.ktor.routing.Route, kotlin.String, java.io.File)/remotePath">remotePath</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.content$file(io.ktor.routing.Route, kotlin.String, java.io.File)/localPath">localPath</span><span class="symbol">:</span>&nbsp;<span class="identifier">File</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Sets up routing to serve <a href="file.html#io.ktor.content$file(io.ktor.routing.Route, kotlin.String, kotlin.String)/localPath">localPath</a> file as <a href="file.html#io.ktor.content$file(io.ktor.routing.Route, kotlin.String, kotlin.String)/remotePath">remotePath</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="files.html">files</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../io.ktor.routing/-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="identifier">files</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content$files(io.ktor.routing.Route, kotlin.String)/folder">folder</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">fun </span><a href="../io.ktor.routing/-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="identifier">files</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content$files(io.ktor.routing.Route, java.io.File)/folder">folder</span><span class="symbol">:</span>&nbsp;<span class="identifier">File</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Sets up routing to serve all files from <a href="files.html#io.ktor.content$files(io.ktor.routing.Route, kotlin.String)/folder">folder</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="find-containing-jar-file.html">findContainingJarFile</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">findContainingJarFile</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content$findContainingJarFile(kotlin.String)/url">url</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">File</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="last-modified-and-etag-versions.html">lastModifiedAndEtagVersions</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">OutgoingContent</span><span class="symbol">.</span><span class="identifier">lastModifiedAndEtagVersions</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="-version/index.html"><span class="identifier">Version</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="resolve-resource.html">resolveResource</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">.</span><span class="identifier">resolveResource</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content$resolveResource(io.ktor.application.ApplicationCall, kotlin.String, kotlin.String, java.lang.ClassLoader, kotlin.Function1((kotlin.String, io.ktor.http.ContentType)))/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.content$resolveResource(io.ktor.application.ApplicationCall, kotlin.String, kotlin.String, java.lang.ClassLoader, kotlin.Function1((kotlin.String, io.ktor.http.ContentType)))/resourcePackage">resourcePackage</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="io.ktor.content$resolveResource(io.ktor.application.ApplicationCall, kotlin.String, kotlin.String, java.lang.ClassLoader, kotlin.Function1((kotlin.String, io.ktor.http.ContentType)))/classLoader">classLoader</span><span class="symbol">:</span>&nbsp;<span class="identifier">ClassLoader</span>&nbsp;<span class="symbol">=</span>&nbsp;application.environment.classLoader<span class="symbol">, </span><span class="identifier" id="io.ktor.content$resolveResource(io.ktor.application.ApplicationCall, kotlin.String, kotlin.String, java.lang.ClassLoader, kotlin.Function1((kotlin.String, io.ktor.http.ContentType)))/mimeResolve">mimeResolve</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">ContentType</span>&nbsp;<span class="symbol">=</span>&nbsp;{ ContentType.defaultForFileExtension(it) }<span class="symbol">)</span><span class="symbol">: </span><a href="-resource/index.html"><span class="identifier">Resource</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="resource.html">resource</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../io.ktor.routing/-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="identifier">resource</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content$resource(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.String)/remotePath">remotePath</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.content$resource(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.String)/resource">resource</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;remotePath<span class="symbol">, </span><span class="identifier" id="io.ktor.content$resource(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.String)/resourcePackage">resourcePackage</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Sets up routing to serve <a href="resource.html#io.ktor.content$resource(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.String)/resource">resource</a> as <a href="resource.html#io.ktor.content$resource(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.String)/remotePath">remotePath</a> in <a href="resource.html#io.ktor.content$resource(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.String)/resourcePackage">resourcePackage</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="resources.html">resources</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../io.ktor.routing/-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="identifier">resources</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content$resources(io.ktor.routing.Route, kotlin.String)/resourcePackage">resourcePackage</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Sets up routing to serve all resources in <a href="resources.html#io.ktor.content$resources(io.ktor.routing.Route, kotlin.String)/resourcePackage">resourcePackage</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="static.html">static</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../io.ktor.routing/-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="identifier">static</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content$static(io.ktor.routing.Route, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/configure">configure</span><span class="symbol">:</span>&nbsp;<a href="../io.ktor.routing/-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../io.ktor.routing/-route/index.html"><span class="identifier">Route</span></a></code>
+<p>Create a block for static content</p>
+<code><span class="keyword">fun </span><a href="../io.ktor.routing/-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="identifier">static</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content$static(io.ktor.routing.Route, kotlin.String, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/remotePath">remotePath</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.content$static(io.ktor.routing.Route, kotlin.String, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/configure">configure</span><span class="symbol">:</span>&nbsp;<a href="../io.ktor.routing/-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../io.ktor.routing/-route/index.html"><span class="identifier">Route</span></a></code>
+<p>Create a block for static content at specified <a href="static.html#io.ktor.content$static(io.ktor.routing.Route, kotlin.String, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/remotePath">remotePath</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

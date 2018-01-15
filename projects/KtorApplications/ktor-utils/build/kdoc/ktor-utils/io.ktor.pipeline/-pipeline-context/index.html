@@ -1,0 +1,70 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>PipelineContext - ktor-utils</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">ktor-utils</a>&nbsp;/&nbsp;<a href="../index.html">io.ktor.pipeline</a>&nbsp;/&nbsp;<a href=".">PipelineContext</a><br/>
+<br/>
+<h1>PipelineContext</h1>
+<code><span class="keyword">class </span><span class="identifier">PipelineContext</span><span class="symbol">&lt;</span><span class="identifier">TSubject</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="keyword">out</span>&nbsp;<span class="identifier">TContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">PipelineContext</span><span class="symbol">(</span><span class="identifier" id="io.ktor.pipeline.PipelineContext$<init>(io.ktor.pipeline.PipelineContext.TContext, kotlin.collections.List((kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((io.ktor.pipeline.PipelineContext.TSubject, io.ktor.pipeline.PipelineContext.TContext)), , kotlin.Unit)))), io.ktor.pipeline.PipelineContext.TSubject)/context">context</span><span class="symbol">:</span>&nbsp;<span class="identifier">TContext</span><span class="symbol">, </span><span class="identifier" id="io.ktor.pipeline.PipelineContext$<init>(io.ktor.pipeline.PipelineContext.TContext, kotlin.collections.List((kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((io.ktor.pipeline.PipelineContext.TSubject, io.ktor.pipeline.PipelineContext.TContext)), , kotlin.Unit)))), io.ktor.pipeline.PipelineContext.TSubject)/interceptors">interceptors</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-pipeline-interceptor.html"><span class="identifier">PipelineInterceptor</span></a><span class="symbol">&lt;</span><span class="identifier">TSubject</span><span class="symbol">,</span>&nbsp;<span class="identifier">TContext</span><span class="symbol">&gt;</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="io.ktor.pipeline.PipelineContext$<init>(io.ktor.pipeline.PipelineContext.TContext, kotlin.collections.List((kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((io.ktor.pipeline.PipelineContext.TSubject, io.ktor.pipeline.PipelineContext.TContext)), , kotlin.Unit)))), io.ktor.pipeline.PipelineContext.TSubject)/subject">subject</span><span class="symbol">:</span>&nbsp;<span class="identifier">TSubject</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="context.html">context</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">context</span><span class="symbol">: </span><span class="identifier">TContext</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="subject.html">subject</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">subject</span><span class="symbol">: </span><span class="identifier">TSubject</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="finish.html">finish</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">finish</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="proceed.html">proceed</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">proceed</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">TSubject</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="proceed-with.html">proceedWith</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">proceedWith</span><span class="symbol">(</span><span class="identifier" id="io.ktor.pipeline.PipelineContext$proceedWith(io.ktor.pipeline.PipelineContext.TSubject)/subject">subject</span><span class="symbol">:</span>&nbsp;<span class="identifier">TSubject</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">TSubject</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

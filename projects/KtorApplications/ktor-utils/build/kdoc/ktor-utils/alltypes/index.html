@@ -1,0 +1,224 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>alltypes - ktor-utils</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<h3>All Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="../io.ktor.org.apache.commons.collections4.map/-abstract-hashed-map/index.html">io.ktor.org.apache.commons.collections4.map.AbstractHashedMap</a></td>
+<td>
+<p>An abstract implementation of a hash-based map which provides numerous points for subclasses to override. 
+<p> This class implements all the features necessary for a subclass hash-based map. Key-value entries are stored in instances of the <code>HashEntry</code> class, which can be overridden and replaced. The iterators can similarly be replaced, without the need to replace the KeySet, EntrySet and Values view classes. </p>
+<p> Overridable methods are provided to change the default hashing behaviour, and to change how entries are added to and removed from the map. Hopefully, all you need for unusual subclasses is here. </p>
+<p> NOTE: From Commons Collections 3.1 this class extends AbstractMap. This is to provide backwards compatibility for ReferenceMap between v3.0 and v3.1. This extends clause will be removed in v5.0.</p>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../io.ktor.org.apache.commons.collections4.map/-abstract-linked-map/index.html">io.ktor.org.apache.commons.collections4.map.AbstractLinkedMap</a></td>
+<td>
+<p>An abstract implementation of a hash-based map that links entries to create an ordered map and which provides numerous points for subclasses to override. 
+<p> This class implements all the features necessary for a subclass linked hash-based map. Key-value entries are stored in instances of the <code>LinkEntry</code> class which can be overridden and replaced. The iterators can similarly be replaced, without the need to replace the KeySet, EntrySet and Values view classes. </p>
+<p> Overridable methods are provided to change the default hashing behaviour, and to change how entries are added to and removed from the map. Hopefully, all you need for unusual subclasses is here. </p>
+<p> This implementation maintains order by original insertion, but subclasses may work differently. The <code>OrderedMap</code> interface is implemented to provide access to bidirectional iteration and extra convenience methods. </p>
+<p> The <code>orderedMapIterator()</code> method provides direct access to a bidirectional iterator. The iterators from the other views can also be cast to <code>OrderedIterator</code> if required. </p>
+<p> All the available iterators can be reset back to the start by casting to <code>ResettableIterator</code> and calling <code>reset()</code>. </p>
+<p> The implementation is also designed to be subclassed, with lots of useful methods exposed.</p>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../io.ktor.util/-attribute-key/index.html">io.ktor.util.AttributeKey</a></td>
+<td>
+<p>Specifies a key for an attribute in <a href="../io.ktor.util/-attributes/index.html">Attributes</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../io.ktor.util/-attributes/index.html">io.ktor.util.Attributes</a></td>
+<td>
+<p>Map of attributes accessible by <a href="../io.ktor.util/-attribute-key/index.html">AttributeKey</a> in a typed manner</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../io.ktor.util/-byte-buffer-builder/index.html">io.ktor.util.ByteBufferBuilder</a></td>
+<td>
+<p>Helper class for building <a href="#">ByteBuffer</a> with the specific content</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../io.ktor.cio/-byte-buffer-pool/index.html">io.ktor.cio.ByteBufferPool</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../io.ktor.cio/kotlinx.coroutines.experimental.io.-byte-read-channel/index.html">kotlinx.coroutines.experimental.io.ByteReadChannel</a> (extensions in package io.ktor.cio)</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../io.ktor.util/kotlinx.coroutines.experimental.io.-byte-read-channel/index.html">kotlinx.coroutines.experimental.io.ByteReadChannel</a> (extensions in package io.ktor.util)</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../io.ktor.cio/kotlinx.coroutines.experimental.io.-byte-write-channel/index.html">kotlinx.coroutines.experimental.io.ByteWriteChannel</a> (extensions in package io.ktor.cio)</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../io.ktor.util/kotlinx.coroutines.experimental.io.-byte-write-channel/index.html">kotlinx.coroutines.experimental.io.ByteWriteChannel</a> (extensions in package io.ktor.util)</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../io.ktor.util/-case-insensitive-map/index.html">io.ktor.util.CaseInsensitiveMap</a></td>
+<td>
+<p>A map with case insensitive <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a> keys</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../io.ktor.cio/-channel-i-o-exception/index.html">io.ktor.cio.ChannelIOException</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../io.ktor.cio/-channel-read-exception/index.html">io.ktor.cio.ChannelReadException</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../io.ktor.cio/-channel-write-exception/index.html">io.ktor.cio.ChannelWriteException</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../io.ktor.pipeline/-context-dsl/index.html">io.ktor.pipeline.ContextDsl</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../io.ktor.cio/kotlin.coroutines.experimental.-coroutine-context/index.html">kotlin.coroutines.experimental.CoroutineContext</a> (extensions in package io.ktor.cio)</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../io.ktor.pipeline/-invalid-phase-exception/index.html">io.ktor.pipeline.InvalidPhaseException</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../io.ktor.cio/-ktor-default-pool/index.html">io.ktor.cio.KtorDefaultPool</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../io.ktor.util/org.slf4j.-logger/index.html">org.slf4j.Logger</a> (extensions in package io.ktor.util)</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../io.ktor.util/kotlin.ranges.-long-range/index.html">kotlin.ranges.LongRange</a> (extensions in package io.ktor.util)</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../io.ktor.cio/-no-pool/index.html">io.ktor.cio.NoPool</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../io.ktor.cio/-noop-continuation/index.html">io.ktor.cio.NoopContinuation</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../io.ktor.cio/kotlinx.io.pool.-object-pool/index.html">kotlinx.io.pool.ObjectPool</a> (extensions in package io.ktor.cio)</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../io.ktor.pipeline/-pipeline/index.html">io.ktor.pipeline.Pipeline</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../io.ktor.pipeline/-pipeline-context/index.html">io.ktor.pipeline.PipelineContext</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../io.ktor.pipeline/-pipeline-interceptor.html">io.ktor.pipeline.PipelineInterceptor</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../io.ktor.pipeline/-pipeline-phase/index.html">io.ktor.pipeline.PipelinePhase</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../io.ktor.cio/-pool-ticket/index.html">io.ktor.cio.PoolTicket</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../io.ktor.cio/-releasable-pool-ticket/index.html">io.ktor.cio.ReleasablePoolTicket</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../io.ktor.util/kotlin.-string/index.html">kotlin.String</a> (extensions in package io.ktor.util)</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../io.ktor.util/-values-map/index.html">io.ktor.util.ValuesMap</a></td>
+<td>
+<p>Provides data structure for associating a <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a> with a <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a> of Strings</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../io.ktor.util/-values-map-builder/index.html">io.ktor.util.ValuesMapBuilder</a></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

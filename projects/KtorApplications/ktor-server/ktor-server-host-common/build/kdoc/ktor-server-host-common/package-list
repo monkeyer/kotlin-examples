@@ -1,0 +1,5 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:io.ktor.server.engine$installDefaultTransformations(io.ktor.request.ApplicationReceivePipeline)io.ktor.server.engine/io.ktor.request.-application-receive-pipeline/install-default-transformations.html
+$dokka.location:io.ktor.server.engine$installDefaultTransformations(io.ktor.response.ApplicationSendPipeline)io.ktor.server.engine/io.ktor.response.-application-send-pipeline/install-default-transformations.html
+io.ktor.server.engine

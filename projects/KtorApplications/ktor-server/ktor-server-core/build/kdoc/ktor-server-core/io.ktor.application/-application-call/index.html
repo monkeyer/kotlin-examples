@@ -1,0 +1,260 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ApplicationCall - ktor-server-core</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">ktor-server-core</a>&nbsp;/&nbsp;<a href="../index.html">io.ktor.application</a>&nbsp;/&nbsp;<a href=".">ApplicationCall</a><br/>
+<br/>
+<h1>ApplicationCall</h1>
+<code><span class="keyword">interface </span><span class="identifier">ApplicationCall</span></code>
+<p>Represents a single act of communication between client and server.</p>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="application.html">application</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">application</span><span class="symbol">: </span><a href="../-application/index.html"><span class="identifier">Application</span></a></code>
+<p>Application being called</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="attributes.html">attributes</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">attributes</span><span class="symbol">: </span><span class="identifier">Attributes</span></code>
+<p>Attributes attached to this instance</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parameters.html">parameters</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">parameters</span><span class="symbol">: </span><span class="identifier">ValuesMap</span></code>
+<p>Parameters associated with this call</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="request.html">request</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">request</span><span class="symbol">: </span><a href="../../io.ktor.request/-application-request/index.html"><span class="identifier">ApplicationRequest</span></a></code>
+<p>Client request</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="response.html">response</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">response</span><span class="symbol">: </span><a href="../../io.ktor.response/-application-response/index.html"><span class="identifier">ApplicationResponse</span></a></code>
+<p>Server response</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../io.ktor.sessions/sessions.html">sessions</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">ApplicationCall</span><span class="symbol">.</span><span class="identifier">sessions</span><span class="symbol">: </span><a href="../../io.ktor.sessions/-current-session/index.html"><span class="identifier">CurrentSession</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../io.ktor.response/default-text-content-type.html">defaultTextContentType</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">ApplicationCall</span><span class="symbol">.</span><span class="identifier">defaultTextContentType</span><span class="symbol">(</span><span class="identifier" id="io.ktor.response$defaultTextContentType(io.ktor.application.ApplicationCall, io.ktor.http.ContentType)/contentType">contentType</span><span class="symbol">:</span>&nbsp;<span class="identifier">ContentType</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ContentType</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.http/push.html">push</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">ApplicationCall</span><span class="symbol">.</span><span class="identifier">push</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http$push(io.ktor.application.ApplicationCall, kotlin.String)/pathAndQuery">pathAndQuery</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">ApplicationCall</span><span class="symbol">.</span><span class="identifier">push</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http$push(io.ktor.application.ApplicationCall, kotlin.String, io.ktor.util.ValuesMap)/encodedPath">encodedPath</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.http$push(io.ktor.application.ApplicationCall, kotlin.String, io.ktor.util.ValuesMap)/parameters">parameters</span><span class="symbol">:</span>&nbsp;<span class="identifier">ValuesMap</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><code><span class="keyword">fun </span><span class="identifier">ApplicationCall</span><span class="symbol">.</span><span class="identifier">push</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http$push(io.ktor.application.ApplicationCall, kotlin.Function1((io.ktor.response.ResponsePushBuilder, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.response/-response-push-builder/index.html"><span class="identifier">ResponsePushBuilder</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Produces HTTP/2 push from server to client or sets HTTP/1.x hint header
+or does nothing (may call or not call <a href="../../io.ktor.http/push.html#io.ktor.http$push(io.ktor.application.ApplicationCall, kotlin.Function1((io.ktor.response.ResponsePushBuilder, kotlin.Unit)))/block">block</a>).
+Exact behaviour is up to engine implementation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.request/receive.html">receive</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">ApplicationCall</span><span class="symbol">.</span><span class="identifier">receive</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.request/receive-channel.html">receiveChannel</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">ApplicationCall</span><span class="symbol">.</span><span class="identifier">receiveChannel</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteReadChannel</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.request/receive-multipart.html">receiveMultipart</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">ApplicationCall</span><span class="symbol">.</span><span class="identifier">receiveMultipart</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MultiPartData</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.request/receive-or-null.html">receiveOrNull</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">ApplicationCall</span><span class="symbol">.</span><span class="identifier">receiveOrNull</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span><span class="symbol">?</span></code><code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">ApplicationCall</span><span class="symbol">.</span><span class="identifier">receiveOrNull</span><span class="symbol">(</span><span class="identifier" id="io.ktor.request$receiveOrNull(io.ktor.application.ApplicationCall, kotlin.reflect.KClass((io.ktor.request.receiveOrNull.T)))/type">type</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html"><span class="identifier">KClass</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span><span class="symbol">?</span></code>
+<p>Receive content for this request</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.request/receive-parameters.html">receiveParameters</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">ApplicationCall</span><span class="symbol">.</span><span class="identifier">receiveParameters</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ValuesMap</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.request/receive-stream.html">receiveStream</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">ApplicationCall</span><span class="symbol">.</span><span class="identifier">receiveStream</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">InputStream</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.request/receive-text.html">receiveText</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">ApplicationCall</span><span class="symbol">.</span><span class="identifier">receiveText</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.content/resolve-resource.html">resolveResource</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">ApplicationCall</span><span class="symbol">.</span><span class="identifier">resolveResource</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content$resolveResource(io.ktor.application.ApplicationCall, kotlin.String, kotlin.String, java.lang.ClassLoader, kotlin.Function1((kotlin.String, io.ktor.http.ContentType)))/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.content$resolveResource(io.ktor.application.ApplicationCall, kotlin.String, kotlin.String, java.lang.ClassLoader, kotlin.Function1((kotlin.String, io.ktor.http.ContentType)))/resourcePackage">resourcePackage</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="io.ktor.content$resolveResource(io.ktor.application.ApplicationCall, kotlin.String, kotlin.String, java.lang.ClassLoader, kotlin.Function1((kotlin.String, io.ktor.http.ContentType)))/classLoader">classLoader</span><span class="symbol">:</span>&nbsp;<span class="identifier">ClassLoader</span>&nbsp;<span class="symbol">=</span>&nbsp;application.environment.classLoader<span class="symbol">, </span><span class="identifier" id="io.ktor.content$resolveResource(io.ktor.application.ApplicationCall, kotlin.String, kotlin.String, java.lang.ClassLoader, kotlin.Function1((kotlin.String, io.ktor.http.ContentType)))/mimeResolve">mimeResolve</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">ContentType</span>&nbsp;<span class="symbol">=</span>&nbsp;{ ContentType.defaultForFileExtension(it) }<span class="symbol">)</span><span class="symbol">: </span><a href="../../io.ktor.content/-resource/index.html"><span class="identifier">Resource</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.response/respond.html">respond</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">ApplicationCall</span><span class="symbol">.</span><span class="identifier">respond</span><span class="symbol">(</span><span class="identifier" id="io.ktor.response$respond(io.ktor.application.ApplicationCall, kotlin.Any)/message">message</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Sends a <a href="../../io.ktor.response/respond.html#io.ktor.response$respond(io.ktor.application.ApplicationCall, kotlin.Any)/message">message</a> as a response</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">ApplicationCall</span><span class="symbol">.</span><span class="identifier">respond</span><span class="symbol">(</span><span class="identifier" id="io.ktor.response$respond(io.ktor.application.ApplicationCall, io.ktor.http.HttpStatusCode, kotlin.Any)/status">status</span><span class="symbol">:</span>&nbsp;<span class="identifier">HttpStatusCode</span><span class="symbol">, </span><span class="identifier" id="io.ktor.response$respond(io.ktor.application.ApplicationCall, io.ktor.http.HttpStatusCode, kotlin.Any)/message">message</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Sets <a href="../../io.ktor.response/respond.html#io.ktor.response$respond(io.ktor.application.ApplicationCall, io.ktor.http.HttpStatusCode, kotlin.Any)/status">status</a> and sends a <a href="../../io.ktor.response/respond.html#io.ktor.response$respond(io.ktor.application.ApplicationCall, io.ktor.http.HttpStatusCode, kotlin.Any)/message">message</a> as a response</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.response/respond-file.html">respondFile</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">ApplicationCall</span><span class="symbol">.</span><span class="identifier">respondFile</span><span class="symbol">(</span><span class="identifier" id="io.ktor.response$respondFile(io.ktor.application.ApplicationCall, java.io.File, kotlin.String)/baseDir">baseDir</span><span class="symbol">:</span>&nbsp;<span class="identifier">File</span><span class="symbol">, </span><span class="identifier" id="io.ktor.response$respondFile(io.ktor.application.ApplicationCall, java.io.File, kotlin.String)/fileName">fileName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">ApplicationCall</span><span class="symbol">.</span><span class="identifier">respondFile</span><span class="symbol">(</span><span class="identifier" id="io.ktor.response$respondFile(io.ktor.application.ApplicationCall, java.io.File)/file">file</span><span class="symbol">:</span>&nbsp;<span class="identifier">File</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.response/respond-redirect.html">respondRedirect</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">ApplicationCall</span><span class="symbol">.</span><span class="identifier">respondRedirect</span><span class="symbol">(</span><span class="identifier" id="io.ktor.response$respondRedirect(io.ktor.application.ApplicationCall, kotlin.String, kotlin.Boolean)/url">url</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.response$respondRedirect(io.ktor.application.ApplicationCall, kotlin.String, kotlin.Boolean)/permanent">permanent</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.response/respond-text.html">respondText</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">ApplicationCall</span><span class="symbol">.</span><span class="identifier">respondText</span><span class="symbol">(</span><span class="identifier" id="io.ktor.response$respondText(io.ktor.application.ApplicationCall, kotlin.String, io.ktor.http.ContentType, io.ktor.http.HttpStatusCode)/text">text</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.response$respondText(io.ktor.application.ApplicationCall, kotlin.String, io.ktor.http.ContentType, io.ktor.http.HttpStatusCode)/contentType">contentType</span><span class="symbol">:</span>&nbsp;<span class="identifier">ContentType</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="io.ktor.response$respondText(io.ktor.application.ApplicationCall, kotlin.String, io.ktor.http.ContentType, io.ktor.http.HttpStatusCode)/status">status</span><span class="symbol">:</span>&nbsp;<span class="identifier">HttpStatusCode</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">ApplicationCall</span><span class="symbol">.</span><span class="identifier">respondText</span><span class="symbol">(</span><span class="identifier" id="io.ktor.response$respondText(io.ktor.application.ApplicationCall, io.ktor.http.ContentType, io.ktor.http.HttpStatusCode, kotlin.SuspendFunction0((kotlin.String)))/contentType">contentType</span><span class="symbol">:</span>&nbsp;<span class="identifier">ContentType</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="io.ktor.response$respondText(io.ktor.application.ApplicationCall, io.ktor.http.ContentType, io.ktor.http.HttpStatusCode, kotlin.SuspendFunction0((kotlin.String)))/status">status</span><span class="symbol">:</span>&nbsp;<span class="identifier">HttpStatusCode</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="io.ktor.response$respondText(io.ktor.application.ApplicationCall, io.ktor.http.ContentType, io.ktor.http.HttpStatusCode, kotlin.SuspendFunction0((kotlin.String)))/provider">provider</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.response/respond-write.html">respondWrite</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">ApplicationCall</span><span class="symbol">.</span><span class="identifier">respondWrite</span><span class="symbol">(</span><span class="identifier" id="io.ktor.response$respondWrite(io.ktor.application.ApplicationCall, io.ktor.http.ContentType, io.ktor.http.HttpStatusCode, kotlin.SuspendFunction1((java.io.Writer, kotlin.Unit)))/contentType">contentType</span><span class="symbol">:</span>&nbsp;<span class="identifier">ContentType</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="io.ktor.response$respondWrite(io.ktor.application.ApplicationCall, io.ktor.http.ContentType, io.ktor.http.HttpStatusCode, kotlin.SuspendFunction1((java.io.Writer, kotlin.Unit)))/status">status</span><span class="symbol">:</span>&nbsp;<span class="identifier">HttpStatusCode</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="io.ktor.response$respondWrite(io.ktor.application.ApplicationCall, io.ktor.http.ContentType, io.ktor.http.HttpStatusCode, kotlin.SuspendFunction1((java.io.Writer, kotlin.Unit)))/writer">writer</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><span class="identifier">Writer</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Respond with content producer.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.features/suitable-charset.html">suitableCharset</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">ApplicationCall</span><span class="symbol">.</span><span class="identifier">suitableCharset</span><span class="symbol">(</span><span class="identifier" id="io.ktor.features$suitableCharset(io.ktor.application.ApplicationCall, java.nio.charset.Charset)/defaultCharset">defaultCharset</span><span class="symbol">:</span>&nbsp;<span class="identifier">Charset</span>&nbsp;<span class="symbol">=</span>&nbsp;Charsets.UTF_8<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Charset</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.request/try-receive.html">tryReceive</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">ApplicationCall</span><span class="symbol">.</span><s><span class="identifier">tryReceive</span></s><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.util/url.html">url</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">ApplicationCall</span><span class="symbol">.</span><span class="identifier">url</span><span class="symbol">(</span><span class="identifier" id="io.ktor.util$url(io.ktor.application.ApplicationCall, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="identifier">URLBuilder</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.features/with-e-tag.html">withETag</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">ApplicationCall</span><span class="symbol">.</span><span class="identifier">withETag</span><span class="symbol">(</span><span class="identifier" id="io.ktor.features$withETag(io.ktor.application.ApplicationCall, kotlin.String, kotlin.Boolean, kotlin.SuspendFunction0((kotlin.Unit)))/etag">etag</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.features$withETag(io.ktor.application.ApplicationCall, kotlin.String, kotlin.Boolean, kotlin.SuspendFunction0((kotlin.Unit)))/putHeader">putHeader</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">, </span><span class="identifier" id="io.ktor.features$withETag(io.ktor.application.ApplicationCall, kotlin.String, kotlin.Boolean, kotlin.SuspendFunction0((kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Checks current <a href="../../io.ktor.features/with-e-tag.html#io.ktor.features$withETag(io.ktor.application.ApplicationCall, kotlin.String, kotlin.Boolean, kotlin.SuspendFunction0((kotlin.Unit)))/etag">etag</a> value and pass it through conditions supplied by the remote client. Depends on conditions it
+produces 410 Precondition Failed or 304 Not modified responses when necessary.
+Otherwise sets ETag header and delegates to the <a href="../../io.ktor.features/with-e-tag.html#io.ktor.features$withETag(io.ktor.application.ApplicationCall, kotlin.String, kotlin.Boolean, kotlin.SuspendFunction0((kotlin.Unit)))/block">block</a> function</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.features/with-last-modified.html">withLastModified</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">ApplicationCall</span><span class="symbol">.</span><span class="identifier">withLastModified</span><span class="symbol">(</span><span class="identifier" id="io.ktor.features$withLastModified(io.ktor.application.ApplicationCall, java.util.Date, kotlin.Boolean, kotlin.SuspendFunction0((kotlin.Unit)))/lastModified">lastModified</span><span class="symbol">:</span>&nbsp;<span class="identifier">Date</span><span class="symbol">, </span><span class="identifier" id="io.ktor.features$withLastModified(io.ktor.application.ApplicationCall, java.util.Date, kotlin.Boolean, kotlin.SuspendFunction0((kotlin.Unit)))/putHeader">putHeader</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">, </span><span class="identifier" id="io.ktor.features$withLastModified(io.ktor.application.ApplicationCall, java.util.Date, kotlin.Boolean, kotlin.SuspendFunction0((kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">ApplicationCall</span><span class="symbol">.</span><span class="identifier">withLastModified</span><span class="symbol">(</span><span class="identifier" id="io.ktor.features$withLastModified(io.ktor.application.ApplicationCall, java.time.ZonedDateTime, kotlin.Boolean, kotlin.SuspendFunction0((kotlin.Unit)))/lastModified">lastModified</span><span class="symbol">:</span>&nbsp;<span class="identifier">ZonedDateTime</span><span class="symbol">, </span><span class="identifier" id="io.ktor.features$withLastModified(io.ktor.application.ApplicationCall, java.time.ZonedDateTime, kotlin.Boolean, kotlin.SuspendFunction0((kotlin.Unit)))/putHeader">putHeader</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">, </span><span class="identifier" id="io.ktor.features$withLastModified(io.ktor.application.ApplicationCall, java.time.ZonedDateTime, kotlin.Boolean, kotlin.SuspendFunction0((kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">ApplicationCall</span><span class="symbol">.</span><span class="identifier">withLastModified</span><span class="symbol">(</span><span class="identifier" id="io.ktor.features$withLastModified(io.ktor.application.ApplicationCall, java.time.LocalDateTime, kotlin.Boolean, kotlin.SuspendFunction0((kotlin.Unit)))/lastModified">lastModified</span><span class="symbol">:</span>&nbsp;<span class="identifier">LocalDateTime</span><span class="symbol">, </span><span class="identifier" id="io.ktor.features$withLastModified(io.ktor.application.ApplicationCall, java.time.LocalDateTime, kotlin.Boolean, kotlin.SuspendFunction0((kotlin.Unit)))/putHeader">putHeader</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">, </span><span class="identifier" id="io.ktor.features$withLastModified(io.ktor.application.ApplicationCall, java.time.LocalDateTime, kotlin.Boolean, kotlin.SuspendFunction0((kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>The function passes the given <a href="../../io.ktor.features/with-last-modified.html#io.ktor.features$withLastModified(io.ktor.application.ApplicationCall, java.time.LocalDateTime, kotlin.Boolean, kotlin.SuspendFunction0((kotlin.Unit)))/lastModified">lastModified</a> date through the client provided
+http conditional headers If-Modified-Since and If-Unmodified-Since. Depends on conditions it
+produces 410 Precondition Failed or 304 Not modified responses when necessary.
+Otherwise sets ETag header and delegates to the <a href="../../io.ktor.features/with-last-modified.html#io.ktor.features$withLastModified(io.ktor.application.ApplicationCall, java.time.LocalDateTime, kotlin.Boolean, kotlin.SuspendFunction0((kotlin.Unit)))/block">block</a> function.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../io.ktor.routing/-routing-application-call/index.html">RoutingApplicationCall</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">RoutingApplicationCall</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ApplicationCall</span></code>
+<p>Represents an application call being handled by <a href="../../io.ktor.routing/-routing/index.html">Routing</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

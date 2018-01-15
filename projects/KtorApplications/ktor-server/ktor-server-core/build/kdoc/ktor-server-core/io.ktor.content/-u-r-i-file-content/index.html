@@ -1,0 +1,130 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>URIFileContent - ktor-server-core</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">ktor-server-core</a>&nbsp;/&nbsp;<a href="../index.html">io.ktor.content</a>&nbsp;/&nbsp;<a href=".">URIFileContent</a><br/>
+<br/>
+<h1>URIFileContent</h1>
+<code><span class="keyword">class </span><span class="identifier">URIFileContent</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ReadChannelContent</span><span class="symbol">, </span><a href="../-resource/index.html"><span class="identifier">Resource</span></a></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">URIFileContent</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content.URIFileContent$<init>(java.net.URL, io.ktor.http.ContentType)/url">url</span><span class="symbol">:</span>&nbsp;<span class="identifier">URL</span><span class="symbol">, </span><span class="identifier" id="io.ktor.content.URIFileContent$<init>(java.net.URL, io.ktor.http.ContentType)/contentType">contentType</span><span class="symbol">:</span>&nbsp;<span class="identifier">ContentType</span>&nbsp;<span class="symbol">=</span>&nbsp;ContentType.defaultForFilePath(url.path)<span class="symbol">)</span></code><br/>
+<code><span class="identifier">URIFileContent</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content.URIFileContent$<init>(java.net.URI, io.ktor.http.ContentType)/uri">uri</span><span class="symbol">:</span>&nbsp;<span class="identifier">URI</span><span class="symbol">, </span><span class="identifier" id="io.ktor.content.URIFileContent$<init>(java.net.URI, io.ktor.http.ContentType)/contentType">contentType</span><span class="symbol">:</span>&nbsp;<span class="identifier">ContentType</span>&nbsp;<span class="symbol">=</span>&nbsp;ContentType.defaultForFilePath(uri.path)<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="cache-control.html">cacheControl</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">cacheControl</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html"><span class="identifier">Nothing</span></a><span class="symbol">?</span></code>
+<p>Specifies caching policy for this resource</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="content-length.html">contentLength</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">contentLength</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html"><span class="identifier">Nothing</span></a><span class="symbol">?</span></code>
+<p>Specifies content length in bytes for this resource.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="content-type.html">contentType</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">contentType</span><span class="symbol">: </span><span class="identifier">ContentType</span></code>
+<p>Specifies <a href="#">ContentType</a> for this resource.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="expires.html">expires</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">expires</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html"><span class="identifier">Nothing</span></a><span class="symbol">?</span></code>
+<p>Specifies expiration time for this resource.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="headers.html">headers</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">headers</span><span class="symbol">: </span><span class="identifier">ValuesMap</span></code>
+<p>Provides default implementation of headers property for instance of <a href="#">OutgoingContent</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="uri.html">uri</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">uri</span><span class="symbol">: </span><span class="identifier">URI</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="versions.html">versions</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">versions</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-version/index.html"><span class="identifier">Version</span></a><span class="symbol">&gt;</span></code>
+<p>Provides list of <a href="../-version/index.html">Version</a> objects which can be utilized by <a href="#">ConditionalHeaders</a> and <a href="#">PartialContent</a> features.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="read-from.html">readFrom</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">readFrom</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteReadChannel</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../content-length.html">contentLength</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">OutgoingContent</span><span class="symbol">.</span><span class="identifier">contentLength</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../content-type.html">contentType</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">OutgoingContent</span><span class="symbol">.</span><span class="identifier">contentType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ContentType</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../last-modified-and-etag-versions.html">lastModifiedAndEtagVersions</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">OutgoingContent</span><span class="symbol">.</span><span class="identifier">lastModifiedAndEtagVersions</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-version/index.html"><span class="identifier">Version</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

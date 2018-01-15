@@ -1,0 +1,411 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Route - ktor-server-core</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">ktor-server-core</a>&nbsp;/&nbsp;<a href="../index.html">io.ktor.routing</a>&nbsp;/&nbsp;<a href=".">Route</a><br/>
+<br/>
+<h1>Route</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Route</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../io.ktor.application/-application-call-pipeline/index.html"><span class="identifier">ApplicationCallPipeline</span></a></code>
+<p>Describes a node in a routing tree</p>
+<h3>Parameters</h3>
+<p><a name="parent"></a>
+<code>parent</code> - is a parent node in the tree, or null for root node</p>
+<p><a name="selector"></a>
+<code>selector</code> - is an instance of <a href="../-route-selector/index.html">RouteSelector</a> for this node</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Route</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing.Route$<init>(io.ktor.routing.Route, io.ktor.routing.RouteSelector)/parent">parent</span><span class="symbol">:</span>&nbsp;<span class="identifier">Route</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="io.ktor.routing.Route$<init>(io.ktor.routing.Route, io.ktor.routing.RouteSelector)/selector">selector</span><span class="symbol">:</span>&nbsp;<a href="../-route-selector/index.html"><span class="identifier">RouteSelector</span></a><span class="symbol">)</span></code>
+<p>Describes a node in a routing tree</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="children.html">children</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">children</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><span class="identifier">Route</span><span class="symbol">&gt;</span></code>
+<p>List of child routes for this node</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parent.html">parent</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">parent</span><span class="symbol">: </span><span class="identifier">Route</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="selector.html">selector</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">selector</span><span class="symbol">: </span><a href="../-route-selector/index.html"><span class="identifier">RouteSelector</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../io.ktor.application/-application-call-pipeline/receive-pipeline.html">receivePipeline</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">receivePipeline</span><span class="symbol">: </span><a href="../../io.ktor.request/-application-receive-pipeline/index.html"><span class="identifier">ApplicationReceivePipeline</span></a></code>
+<p>Pipeline for receiving content</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.application/-application-call-pipeline/send-pipeline.html">sendPipeline</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">sendPipeline</span><span class="symbol">: </span><a href="../../io.ktor.response/-application-send-pipeline/index.html"><span class="identifier">ApplicationSendPipeline</span></a></code>
+<p>Pipeline for sending content</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="create-child.html">createChild</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">createChild</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing.Route$createChild(io.ktor.routing.RouteSelector)/selector">selector</span><span class="symbol">:</span>&nbsp;<a href="../-route-selector/index.html"><span class="identifier">RouteSelector</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Route</span></code>
+<p>Creates a child node in this node with a given <a href="create-child.html#io.ktor.routing.Route$createChild(io.ktor.routing.RouteSelector)/selector">selector</a> or returns an existing one with the same selector</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="handle.html">handle</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">handle</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing.Route$handle(kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((kotlin.Unit, io.ktor.application.ApplicationCall)), , )))/handler">handler</span><span class="symbol">:</span>&nbsp;<span class="identifier">PipelineInterceptor</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">,</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Installs a handler into this route which will be called when the route is selected for a call</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="intercept.html">intercept</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">intercept</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing.Route$intercept(io.ktor.pipeline.PipelinePhase, kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((kotlin.Unit, io.ktor.application.ApplicationCall)), , )))/phase">phase</span><span class="symbol">:</span>&nbsp;<span class="identifier">PipelinePhase</span><span class="symbol">, </span><span class="identifier" id="io.ktor.routing.Route$intercept(io.ktor.pipeline.PipelinePhase, kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((kotlin.Unit, io.ktor.application.ApplicationCall)), , )))/block">block</span><span class="symbol">:</span>&nbsp;<span class="identifier">PipelineInterceptor</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">,</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Installs an interceptor into this route which will be called when this or a child route is selected for a call</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="invoke.html">invoke</a></p>
+</td>
+<td>
+<code><span class="keyword">operator</span> <span class="keyword">fun </span><span class="identifier">invoke</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing.Route$invoke(kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/body">body</span><span class="symbol">:</span>&nbsp;<span class="identifier">Route</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Allows using route instance for building additional routes</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../application.html">application</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">application</span><span class="symbol">: </span><a href="../../io.ktor.application/-application/index.html"><span class="identifier">Application</span></a></code>
+<p>Gets an <a href="../../io.ktor.application/-application/index.html">Application</a> for this Route by scanning the hierarchy to the root</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.features/conversion-service.html">conversionService</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><a href="../../io.ktor.application/-application-call-pipeline/index.html"><span class="identifier">ApplicationCallPipeline</span></a><span class="symbol">.</span><span class="identifier">conversionService</span><span class="symbol">: </span><a href="../../io.ktor.util/-conversion-service/index.html"><span class="identifier">ConversionService</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.content/static-base-package.html">staticBasePackage</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">staticBasePackage</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Base package for relative resources calculations for static content</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.content/static-root-folder.html">staticRootFolder</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">staticRootFolder</span><span class="symbol">: </span><span class="identifier">File</span><span class="symbol">?</span></code>
+<p>Base folder for relative files calculations for static content</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../accept.html">accept</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">accept</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing$accept(io.ktor.routing.Route, io.ktor.http.ContentType, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/contentType">contentType</span><span class="symbol">:</span>&nbsp;<span class="identifier">ContentType</span><span class="symbol">, </span><span class="identifier" id="io.ktor.routing$accept(io.ktor.routing.Route, io.ktor.http.ContentType, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/build">build</span><span class="symbol">:</span>&nbsp;<span class="identifier">Route</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Route</span></code>
+<p>Builds a route to match requests with <a href="#">HttpHeaders.Accept</a> header matching specified <a href="../accept.html#io.ktor.routing$accept(io.ktor.routing.Route, io.ktor.http.ContentType, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/contentType">contentType</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../content-type.html">contentType</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">contentType</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing$contentType(io.ktor.routing.Route, io.ktor.http.ContentType, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/contentType">contentType</span><span class="symbol">:</span>&nbsp;<span class="identifier">ContentType</span><span class="symbol">, </span><span class="identifier" id="io.ktor.routing$contentType(io.ktor.routing.Route, io.ktor.http.ContentType, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/build">build</span><span class="symbol">:</span>&nbsp;<span class="identifier">Route</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Route</span></code>
+<p>Builds a route to match requests with <a href="#">HttpHeaders.ContentType</a> header matching specified <a href="../content-type.html#io.ktor.routing$contentType(io.ktor.routing.Route, io.ktor.http.ContentType, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/contentType">contentType</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../create-route-from-path.html">createRouteFromPath</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">createRouteFromPath</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing$createRouteFromPath(io.ktor.routing.Route, kotlin.String)/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Route</span></code>
+<p>Create a routing entry for specified path</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.content/default.html">default</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">default</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content$default(io.ktor.routing.Route, kotlin.String)/localPath">localPath</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">default</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content$default(io.ktor.routing.Route, java.io.File)/localPath">localPath</span><span class="symbol">:</span>&nbsp;<span class="identifier">File</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Specifies <a href="../../io.ktor.content/default.html#io.ktor.content$default(io.ktor.routing.Route, kotlin.String)/localPath">localPath</a> as a default file to serve when folder is requested</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.content/default-resource.html">defaultResource</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">defaultResource</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content$defaultResource(io.ktor.routing.Route, kotlin.String, kotlin.String)/resource">resource</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.content$defaultResource(io.ktor.routing.Route, kotlin.String, kotlin.String)/resourcePackage">resourcePackage</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Specifies <a href="../../io.ktor.content/default-resource.html#io.ktor.content$defaultResource(io.ktor.routing.Route, kotlin.String, kotlin.String)/resource">resource</a> as a default resources to serve when folder is requested</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../delete.html">delete</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">delete</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing$delete(io.ktor.routing.Route, kotlin.String, kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((kotlin.Unit, io.ktor.application.ApplicationCall)), , )))/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.routing$delete(io.ktor.routing.Route, kotlin.String, kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((kotlin.Unit, io.ktor.application.ApplicationCall)), , )))/body">body</span><span class="symbol">:</span>&nbsp;<span class="identifier">PipelineInterceptor</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">,</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Route</span></code>
+<p>Builds a route to match <code>DELETE</code> requests with specified <a href="../delete.html#io.ktor.routing$delete(io.ktor.routing.Route, kotlin.String, kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((kotlin.Unit, io.ktor.application.ApplicationCall)), , )))/path">path</a></p>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">delete</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing$delete(io.ktor.routing.Route, kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((kotlin.Unit, io.ktor.application.ApplicationCall)), , )))/body">body</span><span class="symbol">:</span>&nbsp;<span class="identifier">PipelineInterceptor</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">,</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Route</span></code>
+<p>Builds a route to match <code>DELETE</code> requests</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.content/file.html">file</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">file</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content$file(io.ktor.routing.Route, kotlin.String, kotlin.String)/remotePath">remotePath</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.content$file(io.ktor.routing.Route, kotlin.String, kotlin.String)/localPath">localPath</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;remotePath<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">file</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content$file(io.ktor.routing.Route, kotlin.String, java.io.File)/remotePath">remotePath</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.content$file(io.ktor.routing.Route, kotlin.String, java.io.File)/localPath">localPath</span><span class="symbol">:</span>&nbsp;<span class="identifier">File</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Sets up routing to serve <a href="../../io.ktor.content/file.html#io.ktor.content$file(io.ktor.routing.Route, kotlin.String, kotlin.String)/localPath">localPath</a> file as <a href="../../io.ktor.content/file.html#io.ktor.content$file(io.ktor.routing.Route, kotlin.String, kotlin.String)/remotePath">remotePath</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.content/files.html">files</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">files</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content$files(io.ktor.routing.Route, kotlin.String)/folder">folder</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">files</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content$files(io.ktor.routing.Route, java.io.File)/folder">folder</span><span class="symbol">:</span>&nbsp;<span class="identifier">File</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Sets up routing to serve all files from <a href="../../io.ktor.content/files.html#io.ktor.content$files(io.ktor.routing.Route, kotlin.String)/folder">folder</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../get.html">get</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing$get(io.ktor.routing.Route, kotlin.String, kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((kotlin.Unit, io.ktor.application.ApplicationCall)), , )))/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.routing$get(io.ktor.routing.Route, kotlin.String, kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((kotlin.Unit, io.ktor.application.ApplicationCall)), , )))/body">body</span><span class="symbol">:</span>&nbsp;<span class="identifier">PipelineInterceptor</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">,</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Route</span></code>
+<p>Builds a route to match <code>GET</code> requests with specified <a href="../get.html#io.ktor.routing$get(io.ktor.routing.Route, kotlin.String, kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((kotlin.Unit, io.ktor.application.ApplicationCall)), , )))/path">path</a></p>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing$get(io.ktor.routing.Route, kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((kotlin.Unit, io.ktor.application.ApplicationCall)), , )))/body">body</span><span class="symbol">:</span>&nbsp;<span class="identifier">PipelineInterceptor</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">,</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Route</span></code>
+<p>Builds a route to match <code>GET</code> requests</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../head.html">head</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">head</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing$head(io.ktor.routing.Route, kotlin.String, kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((kotlin.Unit, io.ktor.application.ApplicationCall)), , )))/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.routing$head(io.ktor.routing.Route, kotlin.String, kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((kotlin.Unit, io.ktor.application.ApplicationCall)), , )))/body">body</span><span class="symbol">:</span>&nbsp;<span class="identifier">PipelineInterceptor</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">,</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Route</span></code>
+<p>Builds a route to match <code>HEAD</code> requests with specified <a href="../head.html#io.ktor.routing$head(io.ktor.routing.Route, kotlin.String, kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((kotlin.Unit, io.ktor.application.ApplicationCall)), , )))/path">path</a></p>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">head</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing$head(io.ktor.routing.Route, kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((kotlin.Unit, io.ktor.application.ApplicationCall)), , )))/body">body</span><span class="symbol">:</span>&nbsp;<span class="identifier">PipelineInterceptor</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">,</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Route</span></code>
+<p>Builds a route to match <code>HEAD</code> requests</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../header.html">header</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">header</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing$header(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.routing$header(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.routing$header(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/build">build</span><span class="symbol">:</span>&nbsp;<span class="identifier">Route</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Route</span></code>
+<p>Builds a route to match header with specified <a href="../header.html#io.ktor.routing$header(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/name">name</a> and <a href="../header.html#io.ktor.routing$header(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/value">value</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../method.html">method</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">method</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing$method(io.ktor.routing.Route, io.ktor.http.HttpMethod, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/method">method</span><span class="symbol">:</span>&nbsp;<span class="identifier">HttpMethod</span><span class="symbol">, </span><span class="identifier" id="io.ktor.routing$method(io.ktor.routing.Route, io.ktor.http.HttpMethod, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/body">body</span><span class="symbol">:</span>&nbsp;<span class="identifier">Route</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Route</span></code>
+<p>Builds a route to match specified <a href="../method.html#io.ktor.routing$method(io.ktor.routing.Route, io.ktor.http.HttpMethod, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/method">method</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../optional-param.html">optionalParam</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">optionalParam</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing$optionalParam(io.ktor.routing.Route, kotlin.String, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.routing$optionalParam(io.ktor.routing.Route, kotlin.String, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/build">build</span><span class="symbol">:</span>&nbsp;<span class="identifier">Route</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Route</span></code>
+<p>Builds a route to optionally capture parameter with specified <a href="../optional-param.html#io.ktor.routing$optionalParam(io.ktor.routing.Route, kotlin.String, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/name">name</a>, if it exists</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../options.html">options</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">options</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing$options(io.ktor.routing.Route, kotlin.String, kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((kotlin.Unit, io.ktor.application.ApplicationCall)), , )))/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.routing$options(io.ktor.routing.Route, kotlin.String, kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((kotlin.Unit, io.ktor.application.ApplicationCall)), , )))/body">body</span><span class="symbol">:</span>&nbsp;<span class="identifier">PipelineInterceptor</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">,</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Route</span></code>
+<p>Builds a route to match <code>OPTIONS</code> requests with specified <a href="../options.html#io.ktor.routing$options(io.ktor.routing.Route, kotlin.String, kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((kotlin.Unit, io.ktor.application.ApplicationCall)), , )))/path">path</a></p>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">options</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing$options(io.ktor.routing.Route, kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((kotlin.Unit, io.ktor.application.ApplicationCall)), , )))/body">body</span><span class="symbol">:</span>&nbsp;<span class="identifier">PipelineInterceptor</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">,</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Route</span></code>
+<p>Builds a route to match <code>OPTIONS</code> requests</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../param.html">param</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">param</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing$param(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.routing$param(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.routing$param(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/build">build</span><span class="symbol">:</span>&nbsp;<span class="identifier">Route</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Route</span></code>
+<p>Builds a route to match parameter with specified <a href="../param.html#io.ktor.routing$param(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/name">name</a> and <a href="../param.html#io.ktor.routing$param(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/value">value</a></p>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">param</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing$param(io.ktor.routing.Route, kotlin.String, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.routing$param(io.ktor.routing.Route, kotlin.String, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/build">build</span><span class="symbol">:</span>&nbsp;<span class="identifier">Route</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Route</span></code>
+<p>Builds a route to match parameter with specified <a href="../param.html#io.ktor.routing$param(io.ktor.routing.Route, kotlin.String, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/name">name</a> and capture its value</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../patch.html">patch</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">patch</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing$patch(io.ktor.routing.Route, kotlin.String, kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((kotlin.Unit, io.ktor.application.ApplicationCall)), , )))/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.routing$patch(io.ktor.routing.Route, kotlin.String, kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((kotlin.Unit, io.ktor.application.ApplicationCall)), , )))/body">body</span><span class="symbol">:</span>&nbsp;<span class="identifier">PipelineInterceptor</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">,</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Route</span></code>
+<p>Builds a route to match <code>PATCH</code> requests with specified <a href="../patch.html#io.ktor.routing$patch(io.ktor.routing.Route, kotlin.String, kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((kotlin.Unit, io.ktor.application.ApplicationCall)), , )))/path">path</a></p>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">patch</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing$patch(io.ktor.routing.Route, kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((kotlin.Unit, io.ktor.application.ApplicationCall)), , )))/body">body</span><span class="symbol">:</span>&nbsp;<span class="identifier">PipelineInterceptor</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">,</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Route</span></code>
+<p>Builds a route to match <code>PATCH</code> requests</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../post.html">post</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">post</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing$post(io.ktor.routing.Route, kotlin.String, kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((kotlin.Unit, io.ktor.application.ApplicationCall)), , )))/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.routing$post(io.ktor.routing.Route, kotlin.String, kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((kotlin.Unit, io.ktor.application.ApplicationCall)), , )))/body">body</span><span class="symbol">:</span>&nbsp;<span class="identifier">PipelineInterceptor</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">,</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Route</span></code>
+<p>Builds a route to match <code>POST</code> requests with specified <a href="../post.html#io.ktor.routing$post(io.ktor.routing.Route, kotlin.String, kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((kotlin.Unit, io.ktor.application.ApplicationCall)), , )))/path">path</a></p>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">post</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing$post(io.ktor.routing.Route, kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((kotlin.Unit, io.ktor.application.ApplicationCall)), , )))/body">body</span><span class="symbol">:</span>&nbsp;<span class="identifier">PipelineInterceptor</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">,</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Route</span></code>
+<p>Builds a route to match <code>POST</code> requests</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../put.html">put</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">put</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing$put(io.ktor.routing.Route, kotlin.String, kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((kotlin.Unit, io.ktor.application.ApplicationCall)), , )))/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.routing$put(io.ktor.routing.Route, kotlin.String, kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((kotlin.Unit, io.ktor.application.ApplicationCall)), , )))/body">body</span><span class="symbol">:</span>&nbsp;<span class="identifier">PipelineInterceptor</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">,</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Route</span></code>
+<p>Builds a route to match <code>PUT</code> requests with specified <a href="../put.html#io.ktor.routing$put(io.ktor.routing.Route, kotlin.String, kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((kotlin.Unit, io.ktor.application.ApplicationCall)), , )))/path">path</a></p>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">put</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing$put(io.ktor.routing.Route, kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((kotlin.Unit, io.ktor.application.ApplicationCall)), , )))/body">body</span><span class="symbol">:</span>&nbsp;<span class="identifier">PipelineInterceptor</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">,</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Route</span></code>
+<p>Builds a route to match <code>PUT</code> requests</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.content/resource.html">resource</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">resource</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content$resource(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.String)/remotePath">remotePath</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.content$resource(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.String)/resource">resource</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;remotePath<span class="symbol">, </span><span class="identifier" id="io.ktor.content$resource(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.String)/resourcePackage">resourcePackage</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Sets up routing to serve <a href="../../io.ktor.content/resource.html#io.ktor.content$resource(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.String)/resource">resource</a> as <a href="../../io.ktor.content/resource.html#io.ktor.content$resource(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.String)/remotePath">remotePath</a> in <a href="../../io.ktor.content/resource.html#io.ktor.content$resource(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.String)/resourcePackage">resourcePackage</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.content/resources.html">resources</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">resources</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content$resources(io.ktor.routing.Route, kotlin.String)/resourcePackage">resourcePackage</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Sets up routing to serve all resources in <a href="../../io.ktor.content/resources.html#io.ktor.content$resources(io.ktor.routing.Route, kotlin.String)/resourcePackage">resourcePackage</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../route.html">route</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">route</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing$route(io.ktor.routing.Route, kotlin.String, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.routing$route(io.ktor.routing.Route, kotlin.String, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/build">build</span><span class="symbol">:</span>&nbsp;<span class="identifier">Route</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Route</span></code>
+<p>Builds a route to match specified <a href="../route.html#io.ktor.routing$route(io.ktor.routing.Route, kotlin.String, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/path">path</a></p>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">route</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing$route(io.ktor.routing.Route, kotlin.String, io.ktor.http.HttpMethod, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.routing$route(io.ktor.routing.Route, kotlin.String, io.ktor.http.HttpMethod, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/method">method</span><span class="symbol">:</span>&nbsp;<span class="identifier">HttpMethod</span><span class="symbol">, </span><span class="identifier" id="io.ktor.routing$route(io.ktor.routing.Route, kotlin.String, io.ktor.http.HttpMethod, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/build">build</span><span class="symbol">:</span>&nbsp;<span class="identifier">Route</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Route</span></code>
+<p>Builds a route to match specified <a href="../route.html#io.ktor.routing$route(io.ktor.routing.Route, kotlin.String, io.ktor.http.HttpMethod, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/method">method</a> and <a href="../route.html#io.ktor.routing$route(io.ktor.routing.Route, kotlin.String, io.ktor.http.HttpMethod, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/path">path</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.content/static.html">static</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">static</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content$static(io.ktor.routing.Route, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/configure">configure</span><span class="symbol">:</span>&nbsp;<span class="identifier">Route</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Route</span></code>
+<p>Create a block for static content</p>
+<code><span class="keyword">fun </span><span class="identifier">Route</span><span class="symbol">.</span><span class="identifier">static</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content$static(io.ktor.routing.Route, kotlin.String, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/remotePath">remotePath</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.content$static(io.ktor.routing.Route, kotlin.String, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/configure">configure</span><span class="symbol">:</span>&nbsp;<span class="identifier">Route</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Route</span></code>
+<p>Create a block for static content at specified <a href="../../io.ktor.content/static.html#io.ktor.content$static(io.ktor.routing.Route, kotlin.String, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/remotePath">remotePath</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-routing/index.html">Routing</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Routing</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Route</span></code>
+<p>Root routing node for an <a href="../../io.ktor.application/-application/index.html">Application</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

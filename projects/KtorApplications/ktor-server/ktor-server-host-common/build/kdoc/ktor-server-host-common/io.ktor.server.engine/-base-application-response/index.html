@@ -1,0 +1,149 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BaseApplicationResponse - ktor-server-host-common</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">ktor-server-host-common</a>&nbsp;/&nbsp;<a href="../index.html">io.ktor.server.engine</a>&nbsp;/&nbsp;<a href=".">BaseApplicationResponse</a><br/>
+<br/>
+<h1>BaseApplicationResponse</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">BaseApplicationResponse</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ApplicationResponse</span></code>
+<p>Base class for implementing an <a href="#">ApplicationResponse</a></p>
+<h3>Exceptions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-response-already-sent-exception/index.html">ResponseAlreadySentException</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ResponseAlreadySentException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-illegal-state-exception/index.html"><span class="identifier">IllegalStateException</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">BaseApplicationResponse</span><span class="symbol">(</span><span class="identifier" id="io.ktor.server.engine.BaseApplicationResponse$<init>(io.ktor.application.ApplicationCall)/call">call</span><span class="symbol">:</span>&nbsp;<span class="identifier">ApplicationCall</span><span class="symbol">)</span></code>
+<p>Base class for implementing an <a href="#">ApplicationResponse</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="buffer-pool.html">bufferPool</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">bufferPool</span><span class="symbol">: </span><span class="identifier">ByteBufferPool</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="call.html">call</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">call</span><span class="symbol">: </span><span class="identifier">ApplicationCall</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="cookies.html">cookies</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">cookies</span><span class="symbol">: </span><span class="identifier">ResponseCookies</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="pipeline.html">pipeline</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">pipeline</span><span class="symbol">: </span><span class="identifier">ApplicationSendPipeline</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="commit-headers.html">commitHeaders</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">commitHeaders</span><span class="symbol">(</span><span class="identifier" id="io.ktor.server.engine.BaseApplicationResponse$commitHeaders(io.ktor.content.OutgoingContent)/o">o</span><span class="symbol">:</span>&nbsp;<span class="identifier">OutgoingContent</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="push.html">push</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">push</span><span class="symbol">(</span><span class="identifier" id="io.ktor.server.engine.BaseApplicationResponse$push(io.ktor.response.ResponsePushBuilder)/builder">builder</span><span class="symbol">:</span>&nbsp;<span class="identifier">ResponsePushBuilder</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="respond-from-bytes.html">respondFromBytes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">respondFromBytes</span><span class="symbol">(</span><span class="identifier" id="io.ktor.server.engine.BaseApplicationResponse$respondFromBytes(kotlin.ByteArray)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="respond-from-channel.html">respondFromChannel</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">respondFromChannel</span><span class="symbol">(</span><span class="identifier" id="io.ktor.server.engine.BaseApplicationResponse$respondFromChannel(kotlinx.coroutines.experimental.io.ByteReadChannel)/readChannel">readChannel</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteReadChannel</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="respond-outgoing-content.html">respondOutgoingContent</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">respondOutgoingContent</span><span class="symbol">(</span><span class="identifier" id="io.ktor.server.engine.BaseApplicationResponse$respondOutgoingContent(io.ktor.content.OutgoingContent)/content">content</span><span class="symbol">:</span>&nbsp;<span class="identifier">OutgoingContent</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="respond-upgrade.html">respondUpgrade</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">respondUpgrade</span><span class="symbol">(</span><span class="identifier" id="io.ktor.server.engine.BaseApplicationResponse$respondUpgrade(io.ktor.content.OutgoingContent.ProtocolUpgrade)/upgrade">upgrade</span><span class="symbol">:</span>&nbsp;<span class="identifier">ProtocolUpgrade</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="respond-write-channel-content.html">respondWriteChannelContent</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">respondWriteChannelContent</span><span class="symbol">(</span><span class="identifier" id="io.ktor.server.engine.BaseApplicationResponse$respondWriteChannelContent(io.ktor.content.OutgoingContent.WriteChannelContent)/content">content</span><span class="symbol">:</span>&nbsp;<span class="identifier">WriteChannelContent</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="response-channel.html">responseChannel</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">responseChannel</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteWriteChannel</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="set-status.html">setStatus</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">setStatus</span><span class="symbol">(</span><span class="identifier" id="io.ktor.server.engine.BaseApplicationResponse$setStatus(io.ktor.http.HttpStatusCode)/statusCode">statusCode</span><span class="symbol">:</span>&nbsp;<span class="identifier">HttpStatusCode</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="status.html">status</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">status</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">HttpStatusCode</span><span class="symbol">?</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">status</span><span class="symbol">(</span><span class="identifier" id="io.ktor.server.engine.BaseApplicationResponse$status(io.ktor.http.HttpStatusCode)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">HttpStatusCode</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

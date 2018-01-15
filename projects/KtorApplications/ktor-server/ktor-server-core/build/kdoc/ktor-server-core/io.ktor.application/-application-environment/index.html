@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ApplicationEnvironment - ktor-server-core</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">ktor-server-core</a>&nbsp;/&nbsp;<a href="../index.html">io.ktor.application</a>&nbsp;/&nbsp;<a href=".">ApplicationEnvironment</a><br/>
+<br/>
+<h1>ApplicationEnvironment</h1>
+<code><span class="keyword">interface </span><span class="identifier">ApplicationEnvironment</span></code>
+<p>Represents an environment in which <a href="../-application/index.html">Application</a> runs</p>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="class-loader.html">classLoader</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">classLoader</span><span class="symbol">: </span><span class="identifier">ClassLoader</span></code>
+<p><a href="#">ClassLoader</a> used to load application.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="config.html">config</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">config</span><span class="symbol">: </span><a href="../../io.ktor.config/-application-config/index.html"><span class="identifier">ApplicationConfig</span></a></code>
+<p>Configuration for the <a href="../-application/index.html">Application</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="log.html">log</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">log</span><span class="symbol">: </span><span class="identifier">Logger</span></code>
+<p>Instance of <a href="#">Logger</a> to be used for logging.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="monitor.html">monitor</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">monitor</span><span class="symbol">: </span><a href="../-application-events/index.html"><span class="identifier">ApplicationEvents</span></a></code>
+<p>Provides events on Application lifecycle</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

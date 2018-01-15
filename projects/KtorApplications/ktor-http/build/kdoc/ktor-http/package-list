@@ -1,0 +1,19 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:io.ktor.http$contentLength(io.ktor.util.ValuesMapBuilder, kotlin.Long)io.ktor.http/io.ktor.util.-values-map-builder/content-length.html
+$dokka.location:io.ktor.http$contentType(io.ktor.util.ValuesMapBuilder, io.ktor.http.ContentType)io.ktor.http/io.ktor.util.-values-map-builder/content-type.html
+$dokka.location:io.ktor.http$escapeIfNeeded(kotlin.String)io.ktor.http/kotlin.-string/escape-if-needed.html
+$dokka.location:io.ktor.http$etag(io.ktor.util.ValuesMapBuilder, kotlin.String)io.ktor.http/io.ktor.util.-values-map-builder/etag.html
+$dokka.location:io.ktor.http$expires(io.ktor.util.ValuesMapBuilder, )io.ktor.http/io.ktor.util.-values-map-builder/expires.html
+$dokka.location:io.ktor.http$formUrlEncode(io.ktor.util.ValuesMap)io.ktor.http/io.ktor.util.-values-map/form-url-encode.html
+$dokka.location:io.ktor.http$formUrlEncode(kotlin.collections.List((kotlin.Pair((kotlin.String, kotlin.String)))))io.ktor.http/kotlin.collections.-list/form-url-encode.html
+$dokka.location:io.ktor.http$formUrlEncodeTo(io.ktor.util.ValuesMap, java.lang.Appendable)io.ktor.http/io.ktor.util.-values-map/form-url-encode-to.html
+$dokka.location:io.ktor.http$formUrlEncodeTo(kotlin.collections.List((kotlin.Pair((kotlin.String, kotlin.String)))), java.lang.Appendable)io.ktor.http/kotlin.collections.-list/form-url-encode-to.html
+$dokka.location:io.ktor.http$fromHttpDateString(kotlin.String)io.ktor.http/kotlin.-string/from-http-date-string.html
+$dokka.location:io.ktor.http$lastModified(io.ktor.util.ValuesMapBuilder, )io.ktor.http/io.ktor.util.-values-map-builder/last-modified.html
+$dokka.location:io.ktor.http$parseUrlEncodedParameters(kotlin.String, , kotlin.Int)io.ktor.http/kotlin.-string/parse-url-encoded-parameters.html
+$dokka.location:io.ktor.http$quote(kotlin.String)io.ktor.http/kotlin.-string/quote.html
+$dokka.location:io.ktor.http$toHeaderParamsList(kotlin.collections.Iterable((kotlin.Pair((kotlin.String, )))))io.ktor.http/kotlin.collections.-iterable/to-header-params-list.html
+$dokka.location:io.ktor.http$toHttpDateString(kotlin.Long)io.ktor.http/kotlin.-long/to-http-date-string.html
+io.ktor.content
+io.ktor.http

@@ -1,0 +1,49 @@
+rootProject.name = 'KtorApplications'
+include ':ktor-samples'
+include ':ktor-server'
+include ':ktor-server:ktor-server-core'
+include ':ktor-server:ktor-server-netty'
+include ':ktor-samples:ktor-samples-hello'
+include ':ktor-http'
+include ':ktor-utils'
+
+project(':ktor-server').projectDir = "$rootDir/ktor-server" as File
+project(':ktor-server:ktor-server-core').projectDir = "$rootDir/ktor-server/ktor-server-core" as File
+project(':ktor-server:ktor-server-netty').projectDir = "$rootDir/ktor-server/ktor-server-netty" as File
+project(':ktor-samples:ktor-samples-hello').projectDir = "$rootDir/ktor-samples/ktor-samples-hello" as File
+project(':ktor-http').projectDir = "$rootDir/ktor-http" as File
+project(':ktor-utils').projectDir = "$rootDir/ktor-utils" as File
+
+include ':ktor-network'
+project(':ktor-network').projectDir = "$rootDir/ktor-network" as File
+
+include ':ktor-http-cio'
+project(':ktor-http-cio').projectDir = "$rootDir/ktor-http-cio" as File
+
+include ':ktor-server:ktor-server-host-common'
+project(':ktor-server:ktor-server-host-common').projectDir = "$rootDir/ktor-server/ktor-server-host-common" as File
+
+include ':ktor-server:ktor-server-test-host'
+project(':ktor-server:ktor-server-test-host').projectDir = "$rootDir/ktor-server/ktor-server-test-host" as File
+
+include ':ktor-client'
+project(':ktor-client').projectDir = "$rootDir/ktor-client" as File
+
+include ':ktor-client:ktor-client-apache'
+project(':ktor-client:ktor-client-apache').projectDir = "$rootDir/ktor-client/ktor-client-apache" as File
+
+include ':ktor-client:ktor-client-core'
+project(':ktor-client:ktor-client-core').projectDir = "$rootDir/ktor-client/ktor-client-core" as File
+
+include ':ktor-client:ktor-client-tests'
+project(':ktor-client:ktor-client-tests').projectDir = "$rootDir/ktor-client/ktor-client-tests" as File
+
+include ':ktor-client:ktor-client-jetty'
+project(':ktor-client:ktor-client-jetty').projectDir = "$rootDir/ktor-client/ktor-client-jetty" as File
+
+include ':ktor-server:ktor-server-jetty'
+project(':ktor-server:ktor-server-jetty').projectDir = "$rootDir/ktor-server/ktor-server-jetty" as File
+
+include ':ktor-server:ktor-server-servlet'
+project(':ktor-server:ktor-server-servlet').projectDir = "$rootDir/ktor-server/ktor-server-servlet" as File
+

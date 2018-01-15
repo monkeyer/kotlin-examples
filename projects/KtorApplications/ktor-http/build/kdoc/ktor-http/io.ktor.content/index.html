@@ -1,0 +1,80 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>io.ktor.content - ktor-http</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">ktor-http</a>&nbsp;/&nbsp;<a href=".">io.ktor.content</a><br/>
+<br/>
+<h2>Package io.ktor.content</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-incoming-content/index.html">IncomingContent</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">IncomingContent</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../io.ktor.http/-http-message/index.html"><span class="identifier">HttpMessage</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-multi-part-data/index.html">MultiPartData</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">MultiPartData</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-outgoing-content/index.html">OutgoingContent</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">OutgoingContent</span></code>
+<p>Information about the content to be sent to the peer, recognized by an <a href="#">ApplicationEngine</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-part-data/index.html">PartData</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">PartData</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-text-content/index.html">TextContent</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">TextContent</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-outgoing-content/-byte-array-content/index.html"><span class="identifier">ByteArrayContent</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="for-each-part.html">forEachPart</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="-multi-part-data/index.html"><span class="identifier">MultiPartData</span></a><span class="symbol">.</span><span class="identifier">forEachPart</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content$forEachPart(io.ktor.content.MultiPartData, kotlin.SuspendFunction1((io.ktor.content.PartData, kotlin.Unit)))/partHandler">partHandler</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><span class="symbol">(</span><a href="-part-data/index.html"><span class="identifier">PartData</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="read-all-parts.html">readAllParts</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="-multi-part-data/index.html"><span class="identifier">MultiPartData</span></a><span class="symbol">.</span><span class="identifier">readAllParts</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="-part-data/index.html"><span class="identifier">PartData</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="read-text.html">readText</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="-incoming-content/index.html"><span class="identifier">IncomingContent</span></a><span class="symbol">.</span><span class="identifier">readText</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content$readText(io.ktor.content.IncomingContent, kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)), )/pool">pool</span><span class="symbol">:</span>&nbsp;<span class="identifier">ObjectPool</span><span class="symbol">&lt;</span><span class="identifier">ByteBuffer</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;KtorDefaultPool<span class="symbol">, </span><span class="identifier" id="io.ktor.content$readText(io.ktor.content.IncomingContent, kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)), )/charset">charset</span><span class="symbol">:</span>&nbsp;<span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

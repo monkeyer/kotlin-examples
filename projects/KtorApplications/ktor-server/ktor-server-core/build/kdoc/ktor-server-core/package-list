@@ -1,0 +1,19 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:io.ktor.application$application#io.ktor.pipeline.PipelineContext((kotlin.Any, io.ktor.application.ApplicationCall))io.ktor.application/io.ktor.pipeline.-pipeline-context/application.html
+$dokka.location:io.ktor.application$call#io.ktor.pipeline.PipelineContext((kotlin.Any, io.ktor.application.ApplicationCall))io.ktor.application/io.ktor.pipeline.-pipeline-context/call.html
+$dokka.location:io.ktor.config$tryGetString(com.typesafe.config.Config, kotlin.String)io.ktor.config/com.typesafe.config.-config/try-get-string.html
+$dokka.location:io.ktor.config$tryGetStringList(com.typesafe.config.Config, kotlin.String)io.ktor.config/com.typesafe.config.-config/try-get-string-list.html
+$dokka.location:io.ktor.content$transformDefaultContent(io.ktor.pipeline.PipelineContext((kotlin.Any, io.ktor.application.ApplicationCall)), kotlin.Any)io.ktor.content/io.ktor.pipeline.-pipeline-context/transform-default-content.html
+$dokka.location:io.ktor.sessions$transformRead(kotlin.collections.List((io.ktor.sessions.SessionTransportTransformer)), kotlin.String)io.ktor.sessions/kotlin.collections.-list/transform-read.html
+$dokka.location:io.ktor.sessions$transformWrite(kotlin.collections.List((io.ktor.sessions.SessionTransportTransformer)), kotlin.String)io.ktor.sessions/kotlin.collections.-list/transform-write.html
+io.ktor.application
+io.ktor.config
+io.ktor.content
+io.ktor.features
+io.ktor.http
+io.ktor.request
+io.ktor.response
+io.ktor.routing
+io.ktor.sessions
+io.ktor.util

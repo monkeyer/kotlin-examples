@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.ktor.tests.http.ByteRangesChannelTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-01-15T04:41:14" hostname="fandeMacBook-Pro.local" time="0.101">
+  <properties/>
+  <testcase name="testAscendingNoLength" classname="io.ktor.tests.http.ByteRangesChannelTest" time="0.097"/>
+  <testcase name="testNonAscendingNoLength" classname="io.ktor.tests.http.ByteRangesChannelTest" time="0.002"/>
+  <testcase name="testAscendingWithLength" classname="io.ktor.tests.http.ByteRangesChannelTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

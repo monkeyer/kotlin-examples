@@ -1,0 +1,328 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>io.ktor.util - ktor-utils</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">ktor-utils</a>&nbsp;/&nbsp;<a href=".">io.ktor.util</a><br/>
+<br/>
+<h2>Package io.ktor.util</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-attribute-key/index.html">AttributeKey</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">AttributeKey</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code>
+<p>Specifies a key for an attribute in <a href="-attributes/index.html">Attributes</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-attributes/index.html">Attributes</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Attributes</span></code>
+<p>Map of attributes accessible by <a href="-attribute-key/index.html">AttributeKey</a> in a typed manner</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-byte-buffer-builder/index.html">ByteBufferBuilder</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ByteBufferBuilder</span></code>
+<p>Helper class for building <a href="#">ByteBuffer</a> with the specific content</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-case-insensitive-map/index.html">CaseInsensitiveMap</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">CaseInsensitiveMap</span><span class="symbol">&lt;</span><span class="identifier">V</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../io.ktor.org.apache.commons.collections4.map/-abstract-linked-map/index.html"><span class="identifier">AbstractLinkedMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span><span class="symbol">, </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-map/index.html"><span class="identifier">MutableMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<span class="identifier">V</span><span class="symbol">&gt;</span></code>
+<p>A map with case insensitive <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a> keys</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-values-map/index.html">ValuesMap</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">ValuesMap</span></code>
+<p>Provides data structure for associating a <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a> with a <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a> of Strings</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-values-map-builder/index.html">ValuesMapBuilder</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ValuesMapBuilder</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extensions for External Classes</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="kotlin.-string/index.html">kotlin.String</a></p>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="kotlin.ranges.-long-range/index.html">kotlin.ranges.LongRange</a></p>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="kotlinx.coroutines.experimental.io.-byte-read-channel/index.html">kotlinx.coroutines.experimental.io.ByteReadChannel</a></p>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="kotlinx.coroutines.experimental.io.-byte-write-channel/index.html">kotlinx.coroutines.experimental.io.ByteWriteChannel</a></p>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="org.slf4j.-logger/index.html">org.slf4j.Logger</a></p>
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="extension.html">extension</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">.</span><span class="identifier">extension</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code>
+<p>Finds an extension of the given Path</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="nonce-random.html">nonceRandom</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">nonceRandom</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="append-all.html">appendAll</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-values-map-builder/index.html"><span class="identifier">ValuesMapBuilder</span></a><span class="symbol">.</span><span class="identifier">appendAll</span><span class="symbol">(</span><span class="identifier" id="io.ktor.util$appendAll(io.ktor.util.ValuesMapBuilder, io.ktor.util.ValuesMapBuilder)/valuesMap">valuesMap</span><span class="symbol">:</span>&nbsp;<a href="-values-map-builder/index.html"><span class="identifier">ValuesMapBuilder</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-values-map-builder/index.html"><span class="identifier">ValuesMapBuilder</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="append-filtered.html">appendFiltered</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-values-map-builder/index.html"><span class="identifier">ValuesMapBuilder</span></a><span class="symbol">.</span><span class="identifier">appendFiltered</span><span class="symbol">(</span><span class="identifier" id="io.ktor.util$appendFiltered(io.ktor.util.ValuesMapBuilder, io.ktor.util.ValuesMap, kotlin.Boolean, kotlin.Function2((kotlin.String, , kotlin.Boolean)))/source">source</span><span class="symbol">:</span>&nbsp;<a href="-values-map/index.html"><span class="identifier">ValuesMap</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.util$appendFiltered(io.ktor.util.ValuesMapBuilder, io.ktor.util.ValuesMap, kotlin.Boolean, kotlin.Function2((kotlin.String, , kotlin.Boolean)))/keepEmpty">keepEmpty</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><span class="identifier" id="io.ktor.util$appendFiltered(io.ktor.util.ValuesMapBuilder, io.ktor.util.ValuesMap, kotlin.Boolean, kotlin.Function2((kotlin.String, , kotlin.Boolean)))/predicate">predicate</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="combine-safe.html">combineSafe</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">.</span><span class="identifier">combineSafe</span><span class="symbol">(</span><span class="identifier" id="io.ktor.util$combineSafe(, kotlin.String)/relativePath">relativePath</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">.</span><span class="identifier">combineSafe</span><span class="symbol">(</span><span class="identifier" id="io.ktor.util$combineSafe(, )/relativePath">relativePath</span><span class="symbol">:</span>&nbsp;<span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="copy.html">copy</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">.</span><span class="identifier">copy</span><span class="symbol">(</span><span class="identifier" id="io.ktor.util$copy(, kotlin.Int)/size">size</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;remaining()<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code>
+<p>Moves all bytes in <code>this</code> buffer to a newly created buffer with the optionally specified <a href="copy.html#io.ktor.util$copy(, kotlin.Int)/size">size</a></p>
+<code><span class="keyword">fun </span><span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">.</span><span class="identifier">copy</span><span class="symbol">(</span><span class="identifier" id="io.ktor.util$copy(, io.ktor.cio.ByteBufferPool, kotlin.Int)/pool">pool</span><span class="symbol">:</span>&nbsp;<a href="../io.ktor.cio/-byte-buffer-pool/index.html"><span class="identifier">ByteBufferPool</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.util$copy(, io.ktor.cio.ByteBufferPool, kotlin.Int)/size">size</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;remaining()<span class="symbol">)</span><span class="symbol">: </span><a href="../io.ktor.cio/-pool-ticket/index.html"><span class="identifier">PoolTicket</span></a></code>
+<p>Moves all bytes in <code>this</code> buffer to a newly created buffer with the optionally specified <a href="copy.html#io.ktor.util$copy(, io.ktor.cio.ByteBufferPool, kotlin.Int)/size">size</a> by allocating it from the given <a href="copy.html#io.ktor.util$copy(, io.ktor.cio.ByteBufferPool, kotlin.Int)/pool">pool</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="decode-base64.html">decodeBase64</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">decodeBase64</span><span class="symbol">(</span><span class="identifier" id="io.ktor.util$decodeBase64(kotlin.String)/s">s</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="decode-string.html">decodeString</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">.</span><span class="identifier">decodeString</span><span class="symbol">(</span><span class="identifier" id="io.ktor.util$decodeString(, )/charset">charset</span><span class="symbol">:</span>&nbsp;<span class="identifier">&lt;ERROR CLASS&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;Charsets.UTF_8<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Decodes a string from <code>this</code> buffer with the specified <a href="decode-string.html#io.ktor.util$decodeString(, )/charset">charset</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="encode-base64.html">encodeBase64</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">encodeBase64</span><span class="symbol">(</span><span class="identifier" id="io.ktor.util$encodeBase64(kotlin.ByteArray)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="filter.html">filter</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-values-map/index.html"><span class="identifier">ValuesMap</span></a><span class="symbol">.</span><span class="identifier">filter</span><span class="symbol">(</span><span class="identifier" id="io.ktor.util$filter(io.ktor.util.ValuesMap, kotlin.Boolean, kotlin.Function2((kotlin.String, , kotlin.Boolean)))/keepEmpty">keepEmpty</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><span class="identifier" id="io.ktor.util$filter(io.ktor.util.ValuesMap, kotlin.Boolean, kotlin.Function2((kotlin.String, , kotlin.Boolean)))/predicate">predicate</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-values-map/index.html"><span class="identifier">ValuesMap</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="find-all-supertypes.html">findAllSupertypes</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">findAllSupertypes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code>
+<p>Calculates a list of all superclasses for the given class</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="flatten-entries.html">flattenEntries</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-values-map/index.html"><span class="identifier">ValuesMap</span></a><span class="symbol">.</span><span class="identifier">flattenEntries</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/index.html"><span class="identifier">Pair</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-digest-function.html">getDigestFunction</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getDigestFunction</span><span class="symbol">(</span><span class="identifier" id="io.ktor.util$getDigestFunction(kotlin.String, kotlin.String)/algorithm">algorithm</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.util$getDigestFunction(kotlin.String, kotlin.String)/salt">salt</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="hex.html">hex</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">hex</span><span class="symbol">(</span><span class="identifier" id="io.ktor.util$hex(kotlin.String)/s">s</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">hex</span><span class="symbol">(</span><span class="identifier" id="io.ktor.util$hex(kotlin.ByteArray)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="move-to.html">moveTo</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">.</span><span class="identifier">moveTo</span><span class="symbol">(</span><span class="identifier" id="io.ktor.util$moveTo(, , kotlin.Int)/destination">destination</span><span class="symbol">:</span>&nbsp;<span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">, </span><span class="identifier" id="io.ktor.util$moveTo(, , kotlin.Int)/limit">limit</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;Int.MAX_VALUE<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>Moves bytes from <code>this</code> buffer to the <a href="move-to.html#io.ktor.util$moveTo(, , kotlin.Int)/destination">destination</a> buffer</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="move-to-byte-array.html">moveToByteArray</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">.</span><span class="identifier">moveToByteArray</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a></code>
+<p>Moves bytes from <code>this</code> buffer into newly created <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a> and returns it</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="next-nonce.html">nextNonce</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">nextNonce</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="normalize-and-relativize.html">normalizeAndRelativize</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">.</span><span class="identifier">normalizeAndRelativize</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="plus.html">plus</a></p>
+</td>
+<td>
+<code><span class="keyword">operator</span> <span class="keyword">fun </span><a href="-values-map/index.html"><span class="identifier">ValuesMap</span></a><span class="symbol">.</span><span class="identifier">plus</span><span class="symbol">(</span><span class="identifier" id="io.ktor.util$plus(io.ktor.util.ValuesMap, io.ktor.util.ValuesMap)/other">other</span><span class="symbol">:</span>&nbsp;<a href="-values-map/index.html"><span class="identifier">ValuesMap</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-values-map/index.html"><span class="identifier">ValuesMap</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="raw.html">raw</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">raw</span><span class="symbol">(</span><span class="identifier" id="io.ktor.util$raw(kotlin.String)/s">s</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="to-date-time.html">toDateTime</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">.</span><span class="identifier">toDateTime</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code>
+<p>Creates <a href="#">ZonedDateTime</a> from this <a href="#">Date</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="to-g-m-t.html">toGMT</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">.</span><span class="identifier">toGMT</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code>
+<p>Converts given <a href="#">LocalDateTime</a> to GMT timezone</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="to-local-date-time.html">toLocalDateTime</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">.</span><span class="identifier">toLocalDateTime</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code>
+<p>Creates <a href="#">LocalDateTime</a> from this <a href="#">Date</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="to-map.html">toMap</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-values-map/index.html"><span class="identifier">ValuesMap</span></a><span class="symbol">.</span><span class="identifier">toMap</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><span class="identifier">Map</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="values-map-builder-of.html">valuesMapBuilderOf</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">valuesMapBuilderOf</span><span class="symbol">(</span><span class="identifier" id="io.ktor.util$valuesMapBuilderOf(io.ktor.util.ValuesMapBuilder)/builder">builder</span><span class="symbol">:</span>&nbsp;<a href="-values-map-builder/index.html"><span class="identifier">ValuesMapBuilder</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-values-map-builder/index.html"><span class="identifier">ValuesMapBuilder</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="values-of.html">valuesOf</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">valuesOf</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="io.ktor.util$valuesOf(kotlin.Array((kotlin.Pair((kotlin.String, kotlin.collections.List(()))))), kotlin.Boolean)/pairs">pairs</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/index.html"><span class="identifier">Pair</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="io.ktor.util$valuesOf(kotlin.Array((kotlin.Pair((kotlin.String, kotlin.collections.List(()))))), kotlin.Boolean)/caseInsensitiveKey">caseInsensitiveKey</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><a href="-values-map/index.html"><span class="identifier">ValuesMap</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">valuesOf</span><span class="symbol">(</span><span class="identifier" id="io.ktor.util$valuesOf(kotlin.Pair((kotlin.String, kotlin.collections.List(()))), kotlin.Boolean)/pair">pair</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/index.html"><span class="identifier">Pair</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="io.ktor.util$valuesOf(kotlin.Pair((kotlin.String, kotlin.collections.List(()))), kotlin.Boolean)/caseInsensitiveKey">caseInsensitiveKey</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><a href="-values-map/index.html"><span class="identifier">ValuesMap</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">valuesOf</span><span class="symbol">(</span><span class="identifier" id="io.ktor.util$valuesOf(kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.Boolean)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.util$valuesOf(kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="io.ktor.util$valuesOf(kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.Boolean)/caseInsensitiveKey">caseInsensitiveKey</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><a href="-values-map/index.html"><span class="identifier">ValuesMap</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">valuesOf</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-values-map/index.html"><span class="identifier">ValuesMap</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">valuesOf</span><span class="symbol">(</span><span class="identifier" id="io.ktor.util$valuesOf(kotlin.collections.Map((kotlin.String, kotlin.collections.Iterable(()))), kotlin.Boolean)/map">map</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><span class="identifier">Map</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html"><span class="identifier">Iterable</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="io.ktor.util$valuesOf(kotlin.collections.Map((kotlin.String, kotlin.collections.Iterable(()))), kotlin.Boolean)/caseInsensitiveKey">caseInsensitiveKey</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><a href="-values-map/index.html"><span class="identifier">ValuesMap</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">valuesOf</span><span class="symbol">(</span><span class="identifier" id="io.ktor.util$valuesOf(io.ktor.util.ValuesMapBuilder)/builder">builder</span><span class="symbol">:</span>&nbsp;<a href="-values-map-builder/index.html"><span class="identifier">ValuesMapBuilder</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-values-map/index.html"><span class="identifier">ValuesMap</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

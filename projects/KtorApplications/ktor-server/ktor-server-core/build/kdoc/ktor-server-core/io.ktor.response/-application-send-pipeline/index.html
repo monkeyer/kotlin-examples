@@ -1,0 +1,93 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ApplicationSendPipeline - ktor-server-core</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">ktor-server-core</a>&nbsp;/&nbsp;<a href="../index.html">io.ktor.response</a>&nbsp;/&nbsp;<a href=".">ApplicationSendPipeline</a><br/>
+<br/>
+<h1>ApplicationSendPipeline</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ApplicationSendPipeline</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Pipeline</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">,</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">&gt;</span></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ApplicationSendPipeline</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-after.html">After</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">After</span><span class="symbol">: </span><span class="identifier">PipelinePhase</span></code>
+<p>The latest application phase that happens right before engine will send the response</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-before.html">Before</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">Before</span><span class="symbol">: </span><span class="identifier">PipelinePhase</span></code>
+<p>The earliest phase that happens before any other</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-content-encoding.html">ContentEncoding</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">ContentEncoding</span><span class="symbol">: </span><span class="identifier">PipelinePhase</span></code>
+<p>Phase for processing Content-Encoding, like compression and partial content</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-engine.html">Engine</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">Engine</span><span class="symbol">: </span><span class="identifier">PipelinePhase</span></code>
+<p>Phase for Engine to send the response out to client.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-render.html">Render</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">Render</span><span class="symbol">: </span><span class="identifier">PipelinePhase</span></code>
+<p>Phase to render any current pipeline subject into <a href="#">OutgoingContent</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-transfer-encoding.html">TransferEncoding</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">TransferEncoding</span><span class="symbol">: </span><span class="identifier">PipelinePhase</span></code>
+<p>Phase for handling Transfer-Encoding, like if chunked encoding is being done manually and not by engine</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-transform.html">Transform</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">Transform</span><span class="symbol">: </span><span class="identifier">PipelinePhase</span></code>
+<p>Transformation phase that can proceed with any supported data like String</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

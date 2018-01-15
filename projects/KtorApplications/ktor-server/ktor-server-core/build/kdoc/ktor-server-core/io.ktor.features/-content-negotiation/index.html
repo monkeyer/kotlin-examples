@@ -1,0 +1,89 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ContentNegotiation - ktor-server-core</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">ktor-server-core</a>&nbsp;/&nbsp;<a href="../index.html">io.ktor.features</a>&nbsp;/&nbsp;<a href=".">ContentNegotiation</a><br/>
+<br/>
+<h1>ContentNegotiation</h1>
+<code><span class="keyword">class </span><span class="identifier">ContentNegotiation</span></code>
+<p>https://tools.ietf.org/html/rfc7231#section-5.3
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Content_negotiation</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-configuration/index.html">Configuration</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Configuration</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-content-converter-registration/index.html">ContentConverterRegistration</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">ContentConverterRegistration</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ContentNegotiation</span><span class="symbol">(</span><span class="identifier" id="io.ktor.features.ContentNegotiation$<init>(kotlin.collections.List((io.ktor.features.ContentNegotiation.ContentConverterRegistration)))/converters">converters</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="-content-converter-registration/index.html"><span class="identifier">ContentConverterRegistration</span></a><span class="symbol">&gt;</span><span class="symbol">)</span></code>
+<p>https://tools.ietf.org/html/rfc7231#section-5.3
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Content_negotiation</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="converters.html">converters</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">converters</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="-content-converter-registration/index.html"><span class="identifier">ContentConverterRegistration</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="key.html">key</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">key</span><span class="symbol">: </span><span class="identifier">AttributeKey</span><span class="symbol">&lt;</span><span class="identifier">ContentNegotiation</span><span class="symbol">&gt;</span></code>
+<p>Unique key that identifies a feature</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="install.html">install</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">install</span><span class="symbol">(</span><span class="identifier" id="io.ktor.features.ContentNegotiation.Feature$install(io.ktor.application.ApplicationCallPipeline, kotlin.Function1((io.ktor.features.ContentNegotiation.Configuration, kotlin.Unit)))/pipeline">pipeline</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.application/-application-call-pipeline/index.html"><span class="identifier">ApplicationCallPipeline</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.features.ContentNegotiation.Feature$install(io.ktor.application.ApplicationCallPipeline, kotlin.Function1((io.ktor.features.ContentNegotiation.Configuration, kotlin.Unit)))/configure">configure</span><span class="symbol">:</span>&nbsp;<a href="-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ContentNegotiation</span></code>
+<p>Feature installation script</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="ktor-client-core_main" target="1.8" />
+      <module name="ktor-client-core_test" target="1.8" />
+      <module name="ktor-client-jetty_main" target="1.8" />
+      <module name="ktor-client-jetty_test" target="1.8" />
+      <module name="ktor-client-tests_main" target="1.8" />
+      <module name="ktor-client-tests_test" target="1.8" />
+      <module name="ktor-server-core_main" target="1.8" />
+      <module name="ktor-server-core_test" target="1.8" />
+      <module name="ktor-server-netty_main" target="1.8" />
+      <module name="ktor-server-netty_test" target="1.8" />
+      <module name="ktor-server-test-host_main~1" target="1.8" />
+      <module name="ktor-server-test-host_test~1" target="1.8" />
+      <module name="KtorApplications-ktor-client_main" target="1.8" />
+      <module name="KtorApplications-ktor-client_test" target="1.8" />
+      <module name="KtorApplications-ktor-http-cio_main" target="1.8" />
+      <module name="KtorApplications-ktor-http-cio_test" target="1.8" />
+      <module name="ktorktor-server-test-host_main" target="1.8" />
+      <module name="ktorktor-server-test-host_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

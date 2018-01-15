@@ -1,0 +1,23 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:io.ktor.cio$bufferedWriter(kotlinx.coroutines.experimental.io.ByteWriteChannel, )io.ktor.cio/kotlinx.coroutines.experimental.io.-byte-write-channel/buffered-writer.html
+$dokka.location:io.ktor.cio$executor(kotlin.coroutines.experimental.CoroutineContext)io.ktor.cio/kotlin.coroutines.experimental.-coroutine-context/executor.html
+$dokka.location:io.ktor.cio$pass(kotlinx.coroutines.experimental.io.ByteReadChannel, java.nio.ByteBuffer, kotlin.SuspendFunction1((java.nio.ByteBuffer, kotlin.Unit)))io.ktor.cio/kotlinx.coroutines.experimental.io.-byte-read-channel/pass.html
+$dokka.location:io.ktor.cio$toByteArray(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlin.Int, kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))io.ktor.cio/kotlinx.coroutines.experimental.io.-byte-read-channel/to-byte-array.html
+$dokka.location:io.ktor.cio$toInputStream(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.Job)io.ktor.cio/kotlinx.coroutines.experimental.io.-byte-read-channel/to-input-stream.html
+$dokka.location:io.ktor.cio$toOutputStream(kotlinx.coroutines.experimental.io.ByteWriteChannel)io.ktor.cio/kotlinx.coroutines.experimental.io.-byte-write-channel/to-output-stream.html
+$dokka.location:io.ktor.cio$use(kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.SuspendFunction1((kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.Unit)))io.ktor.cio/kotlinx.coroutines.experimental.io.-byte-write-channel/use.html
+$dokka.location:io.ktor.cio$use(kotlinx.io.pool.ObjectPool((io.ktor.cio.use.T)), kotlin.SuspendFunction1((io.ktor.cio.use.T, kotlin.Unit)))io.ktor.cio/kotlinx.io.pool.-object-pool/use.html
+$dokka.location:io.ktor.cio$write(kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.String, )io.ktor.cio/kotlinx.coroutines.experimental.io.-byte-write-channel/write.html
+$dokka.location:io.ktor.cio$writer(kotlinx.coroutines.experimental.io.ByteWriteChannel, )io.ktor.cio/kotlinx.coroutines.experimental.io.-byte-write-channel/writer.html
+$dokka.location:io.ktor.util$chomp(kotlin.String, kotlin.String, kotlin.Function0((kotlin.Pair((kotlin.String, )))))io.ktor.util/kotlin.-string/chomp.html
+$dokka.location:io.ktor.util$contains(kotlin.ranges.LongRange, kotlin.ranges.LongRange)io.ktor.util/kotlin.ranges.-long-range/contains.html
+$dokka.location:io.ktor.util$deflated(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlin.Boolean, kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))io.ktor.util/kotlinx.coroutines.experimental.io.-byte-read-channel/deflated.html
+$dokka.location:io.ktor.util$deflated(kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.Boolean, kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))io.ktor.util/kotlinx.coroutines.experimental.io.-byte-write-channel/deflated.html
+$dokka.location:io.ktor.util$error(org.slf4j.Logger, kotlin.Throwable)io.ktor.util/org.slf4j.-logger/error.html
+$dokka.location:io.ktor.util$escapeHTML(kotlin.String)io.ktor.util/kotlin.-string/escape-h-t-m-l.html
+$dokka.location:io.ktor.util$length#kotlin.ranges.LongRangeio.ktor.util/kotlin.ranges.-long-range/length.html
+io.ktor.cio
+io.ktor.org.apache.commons.collections4.map
+io.ktor.pipeline
+io.ktor.util

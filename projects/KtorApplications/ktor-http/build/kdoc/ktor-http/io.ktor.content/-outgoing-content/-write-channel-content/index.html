@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OutgoingContent.WriteChannelContent - ktor-http</title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">ktor-http</a>&nbsp;/&nbsp;<a href="../../index.html">io.ktor.content</a>&nbsp;/&nbsp;<a href="../index.html">OutgoingContent</a>&nbsp;/&nbsp;<a href=".">WriteChannelContent</a><br/>
+<br/>
+<h1>WriteChannelContent</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">WriteChannelContent</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../index.html"><span class="identifier">OutgoingContent</span></a></code>
+<p>Variant of a <a href="../index.html">OutgoingContent</a> with payload written to <a href="#">ByteWriteChannel</a></p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">WriteChannelContent</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Variant of a <a href="../index.html">OutgoingContent</a> with payload written to <a href="#">ByteWriteChannel</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../headers.html">headers</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">headers</span><span class="symbol">: </span><span class="identifier">ValuesMap</span></code>
+<p>Headers to set when sending this content</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../status.html">status</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">status</span><span class="symbol">: </span><a href="../../../io.ktor.http/-http-status-code/index.html"><span class="identifier">HttpStatusCode</span></a><span class="symbol">?</span></code>
+<p>Status code to set when sending this content</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="write-to.html">writeTo</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">writeTo</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content.OutgoingContent.WriteChannelContent$writeTo(kotlinx.coroutines.experimental.io.ByteWriteChannel)/channel">channel</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteWriteChannel</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Receives <a href="write-to.html#io.ktor.content.OutgoingContent.WriteChannelContent$writeTo(kotlinx.coroutines.experimental.io.ByteWriteChannel)/channel">channel</a> provided by the engine and writes all data to it</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

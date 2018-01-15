@@ -1,0 +1,70 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OutgoingContent.ProtocolUpgrade - ktor-http</title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">ktor-http</a>&nbsp;/&nbsp;<a href="../../index.html">io.ktor.content</a>&nbsp;/&nbsp;<a href="../index.html">OutgoingContent</a>&nbsp;/&nbsp;<a href=".">ProtocolUpgrade</a><br/>
+<br/>
+<h1>ProtocolUpgrade</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">ProtocolUpgrade</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../index.html"><span class="identifier">OutgoingContent</span></a></code>
+<p>Variant of a <a href="../index.html">OutgoingContent</a> for upgrading an HTTP connection</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ProtocolUpgrade</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Variant of a <a href="../index.html">OutgoingContent</a> for upgrading an HTTP connection</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="status.html">status</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">status</span><span class="symbol">: </span><a href="../../../io.ktor.http/-http-status-code/index.html"><span class="identifier">HttpStatusCode</span></a><span class="symbol">?</span></code>
+<p>Status code to set when sending this content</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../headers.html">headers</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">headers</span><span class="symbol">: </span><span class="identifier">ValuesMap</span></code>
+<p>Headers to set when sending this content</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="upgrade.html">upgrade</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">upgrade</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content.OutgoingContent.ProtocolUpgrade$upgrade(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.coroutines.experimental.CoroutineContext, kotlin.coroutines.experimental.CoroutineContext)/input">input</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteReadChannel</span><span class="symbol">, </span><span class="identifier" id="io.ktor.content.OutgoingContent.ProtocolUpgrade$upgrade(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.coroutines.experimental.CoroutineContext, kotlin.coroutines.experimental.CoroutineContext)/output">output</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteWriteChannel</span><span class="symbol">, </span><span class="identifier" id="io.ktor.content.OutgoingContent.ProtocolUpgrade$upgrade(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.coroutines.experimental.CoroutineContext, kotlin.coroutines.experimental.CoroutineContext)/engineContext">engineContext</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines.experimental/-coroutine-context/index.html"><span class="identifier">CoroutineContext</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.content.OutgoingContent.ProtocolUpgrade$upgrade(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.coroutines.experimental.CoroutineContext, kotlin.coroutines.experimental.CoroutineContext)/userContext">userContext</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines.experimental/-coroutine-context/index.html"><span class="identifier">CoroutineContext</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Job</span></code>
+<p>Upgrades an HTTP connection</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
